@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# The plugin against the real API, in the same throwaway WordPress + WooCommerce as
+# bin/smoke-test. About 8 API calls. The token is only ever an environment variable:
+#   ISBNLAB_API_TOKEN=ilp_... bin/live-test
+set -euo pipefail
+: "${ISBNLAB_API_TOKEN:?Set ISBNLAB_API_TOKEN}"
+export ISBNLAB_API_TOKEN
+LIVE=1 exec "$(dirname "$0")/smoke-test"

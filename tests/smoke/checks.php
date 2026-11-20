@@ -38,6 +38,12 @@ $check( 'unknown ISBN is not found', 'isbnlab_not_found' === $client->get_book( 
 $client->get_book( '9781234567897' );
 $check( 'not found is cached too', 2 === (int) get_option( 'isbnlab_fake_calls' ) );
 
+delete_option( 'isbnlab_fake_limited' );
+$calls   = (int) get_option( 'isbnlab_fake_calls' );
+$started = microtime( true );
+$retried = $client->get_book( '9780306406157' );
+$check( 'a short rate limit is waited out once', $retried instanceof ISBNLab_Book && 2 === (int) get_option( 'isbnlab_fake_calls' ) - $calls && microtime( true ) - $started >= 1 );
+
 // WooCommerce product.
 $product = new WC_Product_Simple();
 $product->set_name( 'placeholder' );

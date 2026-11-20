@@ -22,6 +22,11 @@ final class ISBNLab_Client {
 	const NOT_FOUND_TTL = HOUR_IN_SECONDS;
 
 	/**
+	 * The longest Retry-After, in seconds, that a request waits out before trying once more.
+	 */
+	const MAX_RETRY_WAIT = 2;
+
+	/**
 	 * API token.
 	 *
 	 * @var string
@@ -112,6 +117,30 @@ final class ISBNLab_Client {
 	 * @return array|WP_Error
 	 */
 	private function request( $path ) {
+		$result = $this->request_once( $path );
+
+		// The API also limits calls per second. A page with several uncached books can hit that,
+		// so wait out a short Retry-After once rather than show nothing.
+		if ( is_wp_error( $result ) && 'isbnlab_rate_limited' === $result->get_error_code() ) {
+			$data  = $result->get_error_data();
+			$retry = isset( $data['retry_after'] ) ? (int) $data['retry_after'] : 0;
+
+			if ( $retry > 0 && $retry <= self::MAX_RETRY_WAIT ) {
+				sleep( $retry );
+				$result = $this->request_once( $path );
+			}
+		}
+
+		return $result;
+	}
+
+	/**
+	 * One GET request, without the retry.
+	 *
+	 * @param string $path Path starting with /api/.
+	 * @return array|WP_Error
+	 */
+	private function request_once( $path ) {
 		if ( '' === $this->token ) {
 			return new WP_Error(
 				'isbnlab_no_token',
@@ -171,13 +200,20 @@ final class ISBNLab_Client {
 			case 404:
 				return $this->not_found();
 			case 429:
-				$retry = (int) wp_remote_retrieve_header( $response, 'retry-after' );
+				$retry   = (int) wp_remote_retrieve_header( $response, 'retry-after' );
 				$message = $retry > 0
 					/* translators: %d: seconds to wait. */
-					? sprintf( __( 'ISBNLab rate limit reached. Try again in %d seconds.', 'isbnlab' ), $retry )
+					? sprintf( _n( 'ISBNLab rate limit reached. Try again in %d second.', 'ISBNLab rate limit reached. Try again in %d seconds.', $retry, 'isbnlab' ), $retry )
 					: __( 'ISBNLab rate limit reached for your plan. Try again later.', 'isbnlab' );
 
-				return new WP_Error( 'isbnlab_rate_limited', $message, array( 'status' => $status ) );
+				return new WP_Error(
+					'isbnlab_rate_limited',
+					$message,
+					array(
+						'status'      => $status,
+						'retry_after' => $retry,
+					)
+				);
 		}
 
 		return new WP_Error(

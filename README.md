@@ -47,7 +47,10 @@ bin/test          # php -l and tests/unit.php on PHP 7.4 and 8.4
 bin/smoke-test    # a throwaway WordPress + WooCommerce, the plugin, tests/smoke/checks.php,
                   # a front-end page check, then the WordPress.org Plugin Check
 KEEP=1 bin/smoke-test   # same, and leave the site at http://localhost:8089 (admin / admin)
+ISBNLAB_API_TOKEN=ilp_... bin/live-test   # the same site against the real API (about 8 calls)
 ```
+
+`bin/live-test` passes the token only as an environment variable; never write it to a file.
 
 The smoke test never calls isbnlab.com: `tests/smoke/fake-api.php` answers API and cover requests from `tests/fixtures` (copied from isbnlab-php's fixtures, which are real responses).
 

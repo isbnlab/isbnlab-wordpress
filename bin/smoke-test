@@ -3,6 +3,7 @@
 # (tests/smoke/fake-api.php), then runs the WordPress.org Plugin Check.
 #   bin/smoke-test           run and remove everything
 #   KEEP=1 bin/smoke-test    leave the site running at http://localhost:8089 (admin / admin)
+# bin/live-test uses the same site without the fake API (LIVE=1).
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -27,10 +28,12 @@ docker run -d --name "$NAME-db" --network "$NAME" \
 MOUNTS=(
 	-v "$NAME-html:/var/www/html"
 	-v "$PLUGIN:/var/www/html/wp-content/plugins/isbnlab:ro"
-	-v "$PLUGIN/tests/smoke/fake-api.php:/var/www/html/wp-content/mu-plugins/fake-api.php:ro"
 	-v "$PLUGIN/tests/fixtures:/fixtures:ro"
-	-v "$PLUGIN/tests/smoke:/smoke:ro"
+	-v "$PLUGIN/tests:/tests:ro"
 )
+if [ -z "${LIVE:-}" ]; then
+	MOUNTS+=(-v "$PLUGIN/tests/smoke/fake-api.php:/var/www/html/wp-content/mu-plugins/fake-api.php:ro")
+fi
 docker run -d --name "$NAME-wp" --network "$NAME" -p "$PORT:80" "${MOUNTS[@]}" \
 	-e WORDPRESS_DB_HOST="$NAME-db" -e WORDPRESS_DB_USER=wp -e WORDPRESS_DB_PASSWORD=wp -e WORDPRESS_DB_NAME=wp \
 	wordpress:php8.3-apache > /dev/null
@@ -38,7 +41,7 @@ docker run -d --name "$NAME-wp" --network "$NAME" -p "$PORT:80" "${MOUNTS[@]}" \
 wp() {
 	docker run --rm --network "$NAME" --user 33:33 "${MOUNTS[@]}" \
 		-e WORDPRESS_DB_HOST="$NAME-db" -e WORDPRESS_DB_USER=wp -e WORDPRESS_DB_PASSWORD=wp -e WORDPRESS_DB_NAME=wp \
-		-e HOME=/tmp wordpress:cli-php8.3 wp "$@"
+		-e HOME=/tmp -e ISBNLAB_API_TOKEN wordpress:cli-php8.3 wp "$@"
 }
 
 echo "== waiting for WordPress"
@@ -53,8 +56,14 @@ wp plugin install woocommerce --activate > /dev/null
 wp plugin activate isbnlab
 echo "WooCommerce $(wp plugin get woocommerce --field=version), WordPress $(wp core version)"
 
+if [ -n "${LIVE:-}" ]; then
+	echo "== live checks against www.isbnlab.com"
+	wp eval-file /tests/live/checks.php
+	exit 0
+fi
+
 echo "== checks"
-wp eval-file /smoke/checks.php
+wp eval-file /tests/smoke/checks.php
 
 echo "== front end"
 page="$(curl -fsS "http://localhost:$PORT/smoke/")"
@@ -64,7 +73,7 @@ if grep -qiE 'fatal error|warning:|notice:|deprecated:' <<< "$page"; then echo "
 
 echo "== Plugin Check"
 wp plugin install plugin-check --activate > /dev/null
-wp plugin check isbnlab --exclude-directories=tests,bin,.github --exclude-files=README.md,.gitignore,.distignore --format=table || true
+wp plugin check isbnlab --exclude-directories=tests,bin,dist,.git,.github --exclude-files=README.md,.gitignore,.gitattributes --format=table || true
 
 if [ -n "${KEEP:-}" ]; then
 	echo "Site left running at http://localhost:$PORT/wp-admin (admin / admin). Remove with: docker rm -f $NAME-wp $NAME-db; docker network rm $NAME; docker volume rm $NAME-html"
