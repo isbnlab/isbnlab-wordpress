@@ -286,7 +286,8 @@ final class ISBNLab_Settings {
 	}
 
 	/**
-	 * AJAX: check the saved token with one call.
+	 * AJAX: check a token with one call. Tests the token typed in the field, so it can be
+	 * checked before saving; with the field empty, tests the saved token.
 	 */
 	public static function ajax_test_connection() {
 		check_ajax_referer( 'isbnlab_test_connection', 'nonce' );
@@ -295,12 +296,41 @@ final class ISBNLab_Settings {
 			wp_send_json_error( array( 'message' => __( 'You are not allowed to do that.', 'isbnlab' ) ), 403 );
 		}
 
-		$result = ISBNLab_Client::from_settings()->test_connection();
+		$typed = isset( $_POST['token'] ) ? trim( sanitize_text_field( wp_unslash( $_POST['token'] ) ) ) : '';
+		$token = self::connection_token( $typed );
+
+		if ( '' === $token ) {
+			wp_send_json_error( array( 'message' => __( 'Enter your API token in the field above, then click Test connection.', 'isbnlab' ) ) );
+		}
+
+		$client = new ISBNLab_Client( $token, self::cache_hours() * HOUR_IN_SECONDS );
+		$result = $client->test_connection();
 
 		if ( is_wp_error( $result ) ) {
 			wp_send_json_error( array( 'message' => $result->get_error_message() ) );
 		}
 
-		wp_send_json_success( array( 'message' => __( 'Connected. Your token works.', 'isbnlab' ) ) );
+		$unsaved = '' !== $typed && ! self::token_from_constant() && self::token() !== $typed;
+		wp_send_json_success(
+			array(
+				'message' => $unsaved
+					? __( 'Connected. This token works. Click Save Changes to keep it.', 'isbnlab' )
+					: __( 'Connected. Your token works.', 'isbnlab' ),
+			)
+		);
+	}
+
+	/**
+	 * The token Test connection checks: the wp-config.php constant if set, else the typed
+	 * token, else the saved one.
+	 *
+	 * @param string $typed The token typed in the field, not saved yet.
+	 * @return string
+	 */
+	public static function connection_token( $typed ) {
+		if ( self::token_from_constant() || '' === $typed ) {
+			return self::token();
+		}
+		return $typed;
 	}
 }

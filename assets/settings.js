@@ -14,6 +14,11 @@
 		var body = new URLSearchParams();
 		body.append( 'action', 'isbnlab_test_connection' );
 		body.append( 'nonce', config.nonce );
+		// Test the token typed in the field, before it is saved; empty means the saved one.
+		var field = document.getElementById( 'isbnlab_token' );
+		if ( field && field.value ) {
+			body.append( 'token', field.value );
+		}
 
 		button.disabled = true;
 		result.textContent = config.testing;

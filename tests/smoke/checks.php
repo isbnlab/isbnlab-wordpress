@@ -40,6 +40,20 @@ $check( 'token saved', 'smoke-token' === ISBNLab_Settings::token() );
 update_option( 'isbnlab_settings', ISBNLab_Settings::sanitize( array( 'token' => '', 'cache_hours' => '12' ) ) );
 $check( 'empty token field keeps the token', 'smoke-token' === ISBNLab_Settings::token() && 12 === ISBNLab_Settings::cache_hours() );
 $check( 'test connection', true === ISBNLab_Client::from_settings()->test_connection() );
+$check( 'test connection: typed token wins over the saved one', 'typed-token' === ISBNLab_Settings::connection_token( 'typed-token' ) );
+$check( 'test connection: empty field uses the saved token', 'smoke-token' === ISBNLab_Settings::connection_token( '' ) );
+$check( 'test connection: a typed wrong token fails', is_wp_error( ( new ISBNLab_Client( ISBNLab_Settings::connection_token( 'typed-token' ), 0 ) )->test_connection() ) );
+add_filter(
+	'pre_http_request',
+	function ( $pre, $args ) {
+		$GLOBALS['isbnlab_sent_headers'] = $args['headers'];
+		return $pre;
+	},
+	1,
+	2
+);
+( new ISBNLab_Client( 'smoke-token', 0 ) )->test_connection();
+$check( 'requests ask a Playground CORS proxy to keep the token', 'Authorization' === ( $GLOBALS['isbnlab_sent_headers']['X-Cors-Proxy-Allowed-Request-Headers'] ?? '' ) );
 
 // Client and cache.
 delete_transient( 'isbnlab_book_9780765302304' );

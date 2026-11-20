@@ -203,8 +203,12 @@ final class ISBNLab_Client {
 				'timeout'     => 10,
 				'redirection' => 2,
 				'headers'     => array(
-					'Authorization' => 'Bearer ' . $this->token,
-					'Accept'        => 'application/json',
+					'Authorization'                        => 'Bearer ' . $this->token,
+					'Accept'                               => 'application/json',
+					// Only for WordPress Playground, where requests can go through its CORS proxy,
+					// which drops the Authorization header unless asked to keep it. Other
+					// servers ignore it.
+					'X-Cors-Proxy-Allowed-Request-Headers' => 'Authorization',
 				),
 				'user-agent'  => 'isbnlab-wordpress/' . ISBNLAB_VERSION . '; WordPress/' . get_bloginfo( 'version' ),
 			)
