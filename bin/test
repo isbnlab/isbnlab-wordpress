@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Offline checks, in Docker: PHP syntax and the unit tests on the oldest and newest supported PHP.
+# bin/smoke-test runs the plugin in a real WordPress with WooCommerce.
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+for version in 7.4 8.4; do
+	echo "== PHP $version"
+	docker run --rm -v "$PWD":/plugin:ro -w /plugin "php:$version-cli" bash -c '
+		set -e
+		find . -name "*.php" -not -path "./tests/smoke/wp/*" -print0 | xargs -0 -n1 php -l | grep -v "^No syntax errors" || true
+		find . -name "*.php" -not -path "./tests/smoke/wp/*" -print0 | xargs -0 -n1 php -l > /dev/null
+		php tests/unit.php
+	'
+done

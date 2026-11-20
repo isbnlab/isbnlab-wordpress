@@ -1,0 +1,58 @@
+/* WooCommerce product screen: the ISBNLab book data box. */
+.isbnlab-box .isbnlab-row {
+	display: flex;
+	gap: 6px;
+}
+
+.isbnlab-box .isbnlab-row input {
+	flex: 1;
+	min-width: 0;
+}
+
+.isbnlab-box .isbnlab-message:empty {
+	display: none;
+}
+
+.isbnlab-box .isbnlab-message.is-error {
+	color: #d63638;
+}
+
+.isbnlab-preview {
+	display: flex;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.isbnlab-preview img {
+	width: 64px;
+	height: auto;
+	align-self: flex-start;
+	border: 1px solid #dcdcde;
+}
+
+.isbnlab-preview dl {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 2px 8px;
+	margin: 6px 0 0;
+	font-size: 12px;
+}
+
+.isbnlab-preview dt {
+	color: #646970;
+}
+
+.isbnlab-preview dd {
+	margin: 0;
+	overflow-wrap: anywhere;
+}
+
+.isbnlab-box .isbnlab-description {
+	font-size: 12px;
+	color: #50575e;
+}
+
+.isbnlab-box fieldset label {
+	display: block;
+	margin: 4px 0;
+}

@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+# Runs the plugin in a throwaway WordPress with WooCommerce, in Docker, against a fake API
+# (tests/smoke/fake-api.php), then runs the WordPress.org Plugin Check.
+#   bin/smoke-test           run and remove everything
+#   KEEP=1 bin/smoke-test    leave the site running at http://localhost:8089 (admin / admin)
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+PLUGIN="$PWD"
+NAME=isbnlab-smoke
+PORT="${PORT:-8089}"
+
+cleanup() {
+	docker rm -f "$NAME-wp" "$NAME-db" > /dev/null 2>&1 || true
+	docker network rm "$NAME" > /dev/null 2>&1 || true
+	docker volume rm "$NAME-html" > /dev/null 2>&1 || true
+}
+cleanup
+[ -z "${KEEP:-}" ] && trap cleanup EXIT
+
+docker network create "$NAME" > /dev/null
+docker volume create "$NAME-html" > /dev/null
+docker run -d --name "$NAME-db" --network "$NAME" \
+	-e MARIADB_DATABASE=wp -e MARIADB_USER=wp -e MARIADB_PASSWORD=wp -e MARIADB_RANDOM_ROOT_PASSWORD=1 \
+	mariadb:11 > /dev/null
+
+MOUNTS=(
+	-v "$NAME-html:/var/www/html"
+	-v "$PLUGIN:/var/www/html/wp-content/plugins/isbnlab:ro"
+	-v "$PLUGIN/tests/smoke/fake-api.php:/var/www/html/wp-content/mu-plugins/fake-api.php:ro"
+	-v "$PLUGIN/tests/fixtures:/fixtures:ro"
+	-v "$PLUGIN/tests/smoke:/smoke:ro"
+)
+docker run -d --name "$NAME-wp" --network "$NAME" -p "$PORT:80" "${MOUNTS[@]}" \
+	-e WORDPRESS_DB_HOST="$NAME-db" -e WORDPRESS_DB_USER=wp -e WORDPRESS_DB_PASSWORD=wp -e WORDPRESS_DB_NAME=wp \
+	wordpress:php8.3-apache > /dev/null
+
+wp() {
+	docker run --rm --network "$NAME" --user 33:33 "${MOUNTS[@]}" \
+		-e WORDPRESS_DB_HOST="$NAME-db" -e WORDPRESS_DB_USER=wp -e WORDPRESS_DB_PASSWORD=wp -e WORDPRESS_DB_NAME=wp \
+		-e HOME=/tmp wordpress:cli-php8.3 wp "$@"
+}
+
+echo "== waiting for WordPress"
+for _ in $(seq 1 60); do
+	if wp core is-installed > /dev/null 2>&1 || wp db check > /dev/null 2>&1; then break; fi
+	sleep 2
+done
+
+wp core install --url="http://localhost:$PORT" --title=Smoke --admin_user=admin --admin_password=admin --admin_email=admin@example.com --skip-email > /dev/null
+wp rewrite structure '/%postname%/' > /dev/null
+wp plugin install woocommerce --activate > /dev/null
+wp plugin activate isbnlab
+echo "WooCommerce $(wp plugin get woocommerce --field=version), WordPress $(wp core version)"
+
+echo "== checks"
+wp eval-file /smoke/checks.php
+
+echo "== front end"
+page="$(curl -fsS "http://localhost:$PORT/smoke/")"
+grep -q 'class="isbnlab-book"' <<< "$page" && echo "ok   page shows the book card" || { echo "FAIL page shows the book card"; exit 1; }
+grep -q 'blocks/book/style.css' <<< "$page" && echo "ok   card stylesheet loaded" || { echo "FAIL card stylesheet loaded"; exit 1; }
+if grep -qiE 'fatal error|warning:|notice:|deprecated:' <<< "$page"; then echo "FAIL PHP errors on the page"; exit 1; fi
+
+echo "== Plugin Check"
+wp plugin install plugin-check --activate > /dev/null
+wp plugin check isbnlab --exclude-directories=tests,bin,.github --exclude-files=README.md,.gitignore,.distignore --format=table || true
+
+if [ -n "${KEEP:-}" ]; then
+	echo "Site left running at http://localhost:$PORT/wp-admin (admin / admin). Remove with: docker rm -f $NAME-wp $NAME-db; docker network rm $NAME; docker volume rm $NAME-html"
+fi

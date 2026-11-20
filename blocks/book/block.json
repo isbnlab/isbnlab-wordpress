@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "isbnlab/book",
+	"version": "0.1.0",
+	"title": "ISBNLab Book",
+	"category": "widgets",
+	"icon": "book-alt",
+	"description": "Show a book's cover, title, authors and details from its ISBN.",
+	"keywords": [ "isbn", "book", "isbnlab" ],
+	"textdomain": "isbnlab",
+	"attributes": {
+		"isbn": {
+			"type": "string",
+			"default": ""
+		},
+		"showCover": {
+			"type": "boolean",
+			"default": true
+		},
+		"showDetails": {
+			"type": "boolean",
+			"default": true
+		},
+		"showDescription": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"color": {
+			"background": true,
+			"text": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "isbnlab-book"
+}

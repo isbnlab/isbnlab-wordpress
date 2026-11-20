@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Builds dist/isbnlab-<version>.zip from the committed files (git archive, so uncommitted
+# changes are left out). The zip holds an isbnlab/ folder, as WordPress expects.
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+version="$(sed -n 's/^define( .ISBNLAB_VERSION., .\([^'"'"']*\). );$/\1/p' isbnlab.php)"
+stable="$(sed -n 's/^Stable tag: //p' readme.txt)"
+if [ "$version" != "$stable" ]; then
+	echo "isbnlab.php says $version but readme.txt Stable tag says $stable" >&2
+	exit 1
+fi
+
+mkdir -p dist
+git archive --format=zip --prefix=isbnlab/ -o "dist/isbnlab-$version.zip" HEAD
+echo "dist/isbnlab-$version.zip"

@@ -1,0 +1,68 @@
+/* The book card for the ISBNLab Book block and [isbnlab_book]. Colours and fonts come from the theme. */
+.isbnlab-book {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25em;
+	align-items: flex-start;
+}
+
+.isbnlab-book__cover {
+	flex: 0 0 auto;
+	width: 160px;
+	max-width: 40%;
+	height: auto;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.isbnlab-book__body {
+	flex: 1 1 16em;
+	min-width: 0;
+}
+
+.isbnlab-book__body > * {
+	margin-top: 0;
+}
+
+.isbnlab-book__title {
+	font-size: 1.25em;
+	font-weight: 700;
+	line-height: 1.25;
+	margin-bottom: 0.2em;
+}
+
+.isbnlab-book__subtitle {
+	font-style: italic;
+	margin-bottom: 0.2em;
+}
+
+.isbnlab-book__authors {
+	margin-bottom: 0.75em;
+}
+
+.isbnlab-book__details {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 0.15em 1em;
+	margin: 0 0 0.75em;
+	font-size: 0.9em;
+}
+
+.isbnlab-book__details dt {
+	opacity: 0.7;
+}
+
+.isbnlab-book__details dd {
+	margin: 0;
+	overflow-wrap: anywhere;
+}
+
+.isbnlab-book__credit {
+	font-size: 0.8em;
+	opacity: 0.8;
+}
+
+.isbnlab-book-notice {
+	padding: 0.5em 0.75em;
+	border-left: 4px solid #d63638;
+	background: rgba(214, 54, 56, 0.08);
+}
