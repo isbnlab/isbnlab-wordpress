@@ -16,8 +16,24 @@ $check = function ( $label, $ok ) use ( &$failures ) {
 
 update_option( 'isbnlab_fake_calls', 0 );
 
+// No token: only the bundled example book, and no network calls at all.
+update_option( 'isbnlab_fake_cover_calls', 0 );
+$example = ( new ISBNLab_Client( '' ) )->get_book( '978-0-7653-0230-4' );
+$check( 'no token: example book works', $example instanceof ISBNLab_Book && 'The Gathering Storm' === $example->title() );
+$no_token = ( new ISBNLab_Client( '' ) )->get_book( '9780439708180' );
+$check( 'no token: other ISBNs ask for a token', is_wp_error( $no_token ) && 'isbnlab_no_token' === $no_token->get_error_code() );
+$check( 'no token: example shortcode renders', false !== strpos( do_shortcode( '[isbnlab_book isbn="9780765302304"]' ), 'The Gathering Storm' ) );
+$demo = new WC_Product_Simple();
+$demo->set_name( 'demo' );
+$demo->save();
+$notes = ISBNLab_WooCommerce::apply( $demo, $example, array( 'title', 'cover', 'attributes' ) );
+$demo  = wc_get_product( $demo->get_id() );
+$check( 'no token: example fills a product with the bundled cover', array() === $notes && $demo->get_image_id() > 0 && 'The Gathering Storm' === $demo->get_name() );
+$check( 'no token: no API or cover requests', 0 === (int) get_option( 'isbnlab_fake_calls' ) && 0 === (int) get_option( 'isbnlab_fake_cover_calls' ) );
+$demo->delete( true );
+wp_delete_attachment( $demo->get_image_id(), true );
+
 // Settings.
-$check( 'no token gives an error', is_wp_error( ( new ISBNLab_Client( '' ) )->get_book( '9780765302304' ) ) );
 $check( 'wrong token gives unauthorized', 'isbnlab_unauthorized' === ( new ISBNLab_Client( 'wrong', 0 ) )->get_book( '9780765302304' )->get_error_code() );
 update_option( 'isbnlab_settings', ISBNLab_Settings::sanitize( array( 'token' => 'smoke-token', 'cache_hours' => '24' ) ) );
 $check( 'token saved', 'smoke-token' === ISBNLab_Settings::token() );

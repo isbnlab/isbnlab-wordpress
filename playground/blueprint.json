@@ -1,0 +1,53 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "ISBNLab Book Data demo",
+		"description": "WooCommerce with the ISBNLab Book Data plugin, a product filled from an ISBN, and a page with the ISBNLab Book block and shortcode.",
+		"author": "isbnlab"
+	},
+	"landingPage": "/",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"features": {
+		"networking": true
+	},
+	"login": true,
+	"steps": [
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "ISBNLab Book Data demo",
+				"permalink_structure": "/%postname%/"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/isbnlab/isbnlab-wordpress",
+				"ref": "main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "isbnlab"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-content/plugins/isbnlab/playground/setup.php';"
+		}
+	]
+}

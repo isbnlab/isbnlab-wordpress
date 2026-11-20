@@ -16,6 +16,11 @@ final class ISBNLab_Client {
 	const BASE_URL = 'https://www.isbnlab.com';
 
 	/**
+	 * The book in assets/example, which works without a token.
+	 */
+	const EXAMPLE_ISBN = '9780765302304';
+
+	/**
 	 * How long a "not found" answer is remembered, so a missing ISBN on a busy page is not
 	 * looked up on every view.
 	 */
@@ -73,6 +78,25 @@ final class ISBNLab_Client {
 			return new WP_Error( 'isbnlab_invalid_isbn', __( 'That is not a valid ISBN-10 or ISBN-13.', 'isbnlab' ) );
 		}
 
+		// Without a token, the bundled example book still works, so the plugin can be tried first.
+		if ( '' === $this->token ) {
+			if ( self::EXAMPLE_ISBN === $isbn13 ) {
+				$example = self::example_book();
+				if ( $example ) {
+					return $example;
+				}
+			}
+
+			return new WP_Error(
+				'isbnlab_no_token',
+				sprintf(
+					/* translators: %s: the example ISBN. */
+					__( 'Add your free ISBNLab API token under Settings > ISBNLab to look up any book. Until then, try the example ISBN %s.', 'isbnlab' ),
+					'978-0-7653-0230-4'
+				)
+			);
+		}
+
 		$cache_key = 'isbnlab_book_' . $isbn13;
 
 		if ( ! $skip_cache && $this->cache_ttl > 0 ) {
@@ -97,6 +121,31 @@ final class ISBNLab_Client {
 		}
 
 		return new ISBNLab_Book( $data );
+	}
+
+	/**
+	 * The example book bundled in assets/example, a copy of
+	 * https://www.isbnlab.com/book/example/9780765302304/the-gathering-storm-by-robert-jordan.json.
+	 *
+	 * @return ISBNLab_Book|null
+	 */
+	public static function example_book() {
+		$file = ISBNLAB_DIR . 'assets/example/' . self::EXAMPLE_ISBN . '.json';
+		$data = is_readable( $file ) ? json_decode( (string) file_get_contents( $file ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- a local file.
+
+		return is_array( $data ) ? new ISBNLab_Book( $data ) : null;
+	}
+
+	/**
+	 * The bundled cover file when $url is the example book's cover, so it is copied rather than downloaded.
+	 *
+	 * @param string $url Cover URL.
+	 * @return string Path, or '' for any other cover.
+	 */
+	public static function example_cover_path( $url ) {
+		$file = ISBNLAB_DIR . 'assets/example/' . self::EXAMPLE_ISBN . '.jpg';
+
+		return ( 'https://covers.isbnlab.com/' . self::EXAMPLE_ISBN . '.jpg' === $url && is_readable( $file ) ) ? $file : '';
 	}
 
 	/**

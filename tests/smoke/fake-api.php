@@ -11,6 +11,7 @@ add_filter(
 	'pre_http_request',
 	function ( $preempt, $args, $url ) {
 		if ( 0 === strpos( $url, 'https://covers.isbnlab.com/' ) ) {
+			update_option( 'isbnlab_fake_cover_calls', (int) get_option( 'isbnlab_fake_cover_calls', 0 ) + 1 );
 			$image = imagecreatetruecolor( 40, 60 );
 			ob_start();
 			imagejpeg( $image );

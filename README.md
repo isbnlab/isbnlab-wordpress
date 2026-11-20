@@ -5,6 +5,8 @@ A WordPress plugin for the [ISBNLab book metadata API](https://www.isbnlab.com/a
 - **WooCommerce:** fill a product from an ISBN. The ISBNLab box on the product screen looks up the book, shows a preview, and fills in the name, description, cover image, attributes (author, publisher, format, pages, …), the GTIN/ISBN field and, if you want, the SKU.
 - **Any site:** show a book with the **ISBNLab Book** block or `[isbnlab_book isbn="9780765302304"]`. Each card includes schema.org `Book` structured data.
 
+**[Try it in your browser](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/isbnlab/isbnlab-wordpress/main/playground/blueprint.json)**: a live WordPress with WooCommerce and the plugin, running in WordPress Playground. No account needed: without a token the plugin works with one example book, ISBN 978-0-7653-0230-4 (bundled in `assets/example`, a copy of [this sample](https://www.isbnlab.com/book/example/9780765302304/the-gathering-storm-by-robert-jordan.json)). Paste a free token on Settings > ISBNLab to look up any ISBN.
+
 `readme.txt` is the WordPress.org listing and the user documentation.
 
 ## Requirements
@@ -37,6 +39,12 @@ define( 'ISBNLAB_API_TOKEN', 'ilp_...' );
 There is no build step: the block's editor script is plain JavaScript on WordPress's own `wp.*` packages, with its dependencies listed by hand in `blocks/book/index.asset.php`.
 
 The plugin calls only `GET /api/book/isbn/{isbn}` (lookups) and `GET /api/isbn/isbn-lookup/{isbn}` (Test connection), and sends `Accept: application/json` on every request.
+
+## The Playground demo
+
+`playground/blueprint.json` installs WooCommerce and this repository's `main` branch, then runs `playground/setup.php`, which fills a product from the example book and makes the demo page. Both are left out of the plugin zip. WordPress.org's Live Preview button can use the same blueprint once it is copied to the listing's `assets/blueprints/blueprint.json`.
+
+In Playground the plugin's API calls are made by the visitor's browser, so a pasted token only works once www.isbnlab.com allows CORS requests from `https://playground.wordpress.net`. The example book needs no request.
 
 ## Tests
 

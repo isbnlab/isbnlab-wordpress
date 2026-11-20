@@ -86,23 +86,26 @@ final class ISBNLab_WooCommerce {
 			}
 		}
 
-		if ( '' === ISBNLab_Settings::token() ) {
-			printf(
-				'<p>%s</p>',
-				wp_kses(
-					sprintf(
-						/* translators: %s: settings page URL. */
-						__( 'Add your API token on the <a href="%s">ISBNLab settings page</a> to look up books.', 'isbnlab' ),
-						esc_url( admin_url( 'options-general.php?page=' . ISBNLab_Settings::PAGE ) )
-					),
-					array( 'a' => array( 'href' => array() ) )
-				)
-			);
-
-			return;
+		$no_token = '' === ISBNLab_Settings::token();
+		if ( $no_token && '' === $isbn ) {
+			$isbn = '978-0-7653-0230-4';
 		}
 		?>
 		<div class="isbnlab-box">
+			<?php if ( $no_token ) : ?>
+				<p class="isbnlab-no-token">
+					<?php
+					echo wp_kses(
+						sprintf(
+							/* translators: %s: settings page URL. */
+							__( 'No API token yet, so only the example book works. Add your free token on the <a href="%s">ISBNLab settings page</a> to look up any ISBN.', 'isbnlab' ),
+							esc_url( admin_url( 'options-general.php?page=' . ISBNLab_Settings::PAGE ) )
+						),
+						array( 'a' => array( 'href' => array() ) )
+					);
+					?>
+				</p>
+			<?php endif; ?>
 			<label for="isbnlab-isbn" class="screen-reader-text"><?php esc_html_e( 'ISBN', 'isbnlab' ); ?></label>
 			<div class="isbnlab-row">
 				<input type="text" id="isbnlab-isbn" value="<?php echo esc_attr( $isbn ); ?>" placeholder="<?php esc_attr_e( 'ISBN-10 or ISBN-13', 'isbnlab' ); ?>" inputmode="numeric" autocomplete="off" />
@@ -354,7 +357,24 @@ final class ISBNLab_WooCommerce {
 
 		/* translators: %s: book title. */
 		$alt = sprintf( __( 'Cover of %s', 'isbnlab' ), $book->title() );
-		$id  = media_sideload_image( $url, $post_id, $alt, 'id' );
+		$local = ISBNLab_Client::example_cover_path( $url );
+		if ( '' !== $local ) {
+			$tmp = wp_tempnam( basename( $local ) );
+			copy( $local, $tmp );
+			$id = media_handle_sideload(
+				array(
+					'name'     => basename( $local ),
+					'tmp_name' => $tmp,
+				),
+				$post_id,
+				$alt
+			);
+			if ( is_wp_error( $id ) ) {
+				wp_delete_file( $tmp );
+			}
+		} else {
+			$id = media_sideload_image( $url, $post_id, $alt, 'id' );
+		}
 
 		if ( is_wp_error( $id ) ) {
 			return new WP_Error(

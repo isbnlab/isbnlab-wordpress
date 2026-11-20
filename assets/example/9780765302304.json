@@ -1,0 +1,454 @@
+{
+  "id": 15596406,
+  "isbn10": "0765302306",
+  "isbn13": "9780765302304",
+  "workId": 17473680,
+  "title": "The Gathering Storm",
+  "subtitle": "Book Twelve of the Wheel of Time",
+  "numberOfPages": 784,
+  "description": "With Robert Jordan’s untimely passing in 2007, Brandon Sanderson, the New York Times bestselling author of the Mistborn novels and the Stormlight Archive, was chosen by Jordan’s editor—his wife, Harriet McDougal—to complete the final volume in The Wheel of Time®, later expanded to three books.The Gathering Storm, the twelfth novel in Jordan’s #1 New York Times bestselling epic fantasy series, begins the story’s dramatic conclusion as Rand al'Thor, the Dragon Reborn, struggles to unite a fractured network of kingdoms and alliances in preparation for the Last Battle.War is coming. The Dark One’s forces are brutal and unrelenting. Rand must forge a united front, but the Seanchan remain an immediate threat, as do the Forsaken. With so many shadows swirling around him, Rand is consumed by his responsibilities, turning heartless in the eyes of his allies, and even more merciless to his enemies.Meanwhile the Seanchan march on the White Tower, where Egwene al'Vere works to rally the disparate factions of the Aes Sedai together, even as their tyrannical leader schemes against her. Providing leadership in the face of increasing uncertainty and despair, Egwene’s fight will prove the mettle of the Aes Sedai, and her conflict will decide the future of the White Tower—and possibly the world itself.Since its debut in 1990, The Wheel of Time® by Robert Jordan has captivated millions of readers around the globe with its scope, originality, and compelling characters. The last six books in series were all instant #1 New York Times bestsellers, and The Eye of the World was named one of America's best-loved novels by PBS's The Great American Read.The Wheel of Time®New Spring: The Novel#1 The Eye of the World#2 The Great Hunt#3 The Dragon Reborn#4 The Shadow Rising#5 The Fires of Heaven#6 Lord of Chaos#7 A Crown of Swords#8 The Path of Daggers#9 Winter's Heart#10 Crossroads of Twilight#11 Knife of DreamsBy Robert Jordan and Brandon Sanderson#12 The Gathering Storm#13 Towers of Midnight#14 A Memory of LightBy Robert Jordan and Teresa PattersonThe World of Robert Jordan's The Wheel of TimeBy Robert Jordan, Harriet McDougal, Alan Romanczuk, and Maria SimonsThe Wheel of Time CompanionBy Robert Jordan and Amy RomanczukPatterns of the Wheel: Coloring Art Based on Robert Jordan's The Wheel of Time",
+  "publishers": [
+    {
+      "id": 4387209,
+      "slug": "tor-publishing-group",
+      "name": "Tor Publishing Group"
+    }
+  ],
+  "imprint": [
+    {
+      "slug": "tor-books",
+      "name": "Tor Books"
+    }
+  ],
+  "publishDate": "2009-10-27T00:00:00+00:00",
+  "physicalFormat": "Hardcover",
+  "covers": [
+    "https://covers.isbnlab.com/9780765302304.jpg",
+    "https://covers.isbnlab.com/9780765302304-01.jpg"
+  ],
+  "authors": [
+    {
+      "id": 3705408,
+      "slug": "robert-jordan",
+      "name": "Robert Jordan"
+    },
+    {
+      "id": 8716932,
+      "slug": "brandon-sanderson",
+      "name": "Brandon Sanderson"
+    }
+  ],
+  "contributors": null,
+  "subjects": [
+    {
+      "id": 51,
+      "slug": "fiction",
+      "name": "Fiction"
+    },
+    {
+      "id": 787,
+      "slug": "fantasy",
+      "name": "Fantasy"
+    },
+    {
+      "id": 7012,
+      "slug": "famous",
+      "name": "Famous"
+    },
+    {
+      "id": 33142,
+      "slug": "epic",
+      "name": "Epic"
+    },
+    {
+      "id": 60844,
+      "slug": "action-and-adventure",
+      "name": "Action And Adventure"
+    },
+    {
+      "id": 111968,
+      "slug": "rand-al-thor-fictitious-character",
+      "name": "Rand Al'Thor (Fictitious Character)"
+    },
+    {
+      "id": 207926,
+      "slug": "ya-fantasy",
+      "name": "Ya Fantasy"
+    },
+    {
+      "id": 220339,
+      "slug": "sword-and-sorcery",
+      "name": "Sword And Sorcery"
+    },
+    {
+      "id": 475130,
+      "slug": "wot-book-12",
+      "name": "Wot Book 12"
+    },
+    {
+      "id": 475131,
+      "slug": "twelfth-wheel-of-time-novel",
+      "name": "Twelfth Wheel Of Time Novel"
+    },
+    {
+      "id": 475132,
+      "slug": "best-fantasy-series-of-all-time",
+      "name": "Best Fantasy Series Of All Time"
+    },
+    {
+      "id": 475133,
+      "slug": "classic-high-fantasy",
+      "name": "Classic High Fantasy"
+    },
+    {
+      "id": 475135,
+      "slug": "magic-battles",
+      "name": "Magic Battles"
+    },
+    {
+      "id": 475136,
+      "slug": "books-made-into-tv-shows",
+      "name": "Books Made Into Tv Shows"
+    },
+    {
+      "id": 475137,
+      "slug": "teen-sff",
+      "name": "Teen Sff"
+    }
+  ],
+  "series": {
+    "id": 50175,
+    "identifier": "907828dc612b70769ff891cca208c863",
+    "slug": "wheel-of-time",
+    "name": "Wheel of time",
+    "number": 12,
+    "kind": "story",
+    "parent": null,
+    "previousBook": {
+      "isbn10": "0312873077",
+      "isbn13": "9780312873073",
+      "title": "Knife of Dreams",
+      "slug": "knife-of-dreams",
+      "number": 11,
+      "workId": 36506240,
+      "workSlug": "knife-of-dreams"
+    },
+    "nextBook": {
+      "isbn10": "0765325942",
+      "isbn13": "9780765325945",
+      "title": "Towers of Midnight",
+      "slug": "towers-of-midnight",
+      "number": 13,
+      "workId": 15474364,
+      "workSlug": "towers-of-midnight"
+    },
+    "otherSeries": []
+  },
+  "genres": null,
+  "otherEditions": [
+    {
+      "isbn10": "0792766628",
+      "isbn13": "9780792766629",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2009",
+      "physicalFormat": "MP3 CD",
+      "pages": null,
+      "imprint": null
+    },
+    {
+      "isbn10": "1841491659",
+      "isbn13": "9781841491653",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2009",
+      "physicalFormat": "Hardcover",
+      "pages": 783,
+      "imprint": null
+    },
+    {
+      "isbn10": "1841492418",
+      "isbn13": "9781841492414",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2009",
+      "physicalFormat": "Paperback",
+      "pages": 784,
+      "imprint": null
+    },
+    {
+      "isbn10": "3820098135",
+      "isbn13": "9783820098136",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2009",
+      "physicalFormat": null,
+      "pages": null,
+      "imprint": null
+    },
+    {
+      "isbn10": "1429960833",
+      "isbn13": "9781429960830",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2009",
+      "physicalFormat": "e-Book",
+      "pages": 784,
+      "imprint": null
+    },
+    {
+      "isbn10": "1593977670",
+      "isbn13": "9781593977672",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2009",
+      "physicalFormat": "CD-Audio",
+      "pages": null,
+      "imprint": "Macmillan Audio"
+    },
+    {
+      "isbn10": "1616812796",
+      "isbn13": "9781616812799",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2009",
+      "physicalFormat": "Hardcover",
+      "pages": null,
+      "imprint": null
+    },
+    {
+      "isbn10": "0765324164",
+      "isbn13": "9780765324160",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2009",
+      "physicalFormat": "Leather / fine binding",
+      "pages": 784,
+      "imprint": "Tor Books"
+    },
+    {
+      "isbn10": "1841492329",
+      "isbn13": "9781841492322",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2010",
+      "physicalFormat": "Paperback",
+      "pages": 844,
+      "imprint": null
+    },
+    {
+      "isbn10": "8448034740",
+      "isbn13": "9788448034740",
+      "title": "La Tormenta",
+      "slug": "la-tormenta",
+      "published": "2010",
+      "physicalFormat": "Hardcover",
+      "pages": 824,
+      "imprint": null
+    },
+    {
+      "isbn10": "0765341530",
+      "isbn13": "9780765341532",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2010",
+      "physicalFormat": "Paperback / softback",
+      "pages": 1120,
+      "imprint": "Tor Books"
+    },
+    {
+      "isbn10": "0748115455",
+      "isbn13": "9780748115457",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2010",
+      "physicalFormat": "eBook (EPUB)",
+      "pages": 848,
+      "imprint": "Orbit"
+    },
+    {
+      "isbn10": "6053750328",
+      "isbn13": "9786053750321",
+      "title": "Fırtına Toplanıyor",
+      "slug": "firtina-toplaniyor",
+      "published": "2010",
+      "physicalFormat": "paperback",
+      "pages": 944,
+      "imprint": null
+    },
+    {
+      "isbn10": "1427227837",
+      "isbn13": "9781427227836",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2012",
+      "physicalFormat": "Audio - Unabridged",
+      "pages": null,
+      "imprint": null
+    },
+    {
+      "isbn10": "3492959431",
+      "isbn13": "9783492959438",
+      "title": "Das Rad Der Zeit 12. Das Original (Das Rad Der Zeit 12)",
+      "slug": "das-rad-der-zeit-12-das-original-das-rad-der-zeit-12",
+      "published": "2013",
+      "physicalFormat": "Kindle Edition",
+      "pages": 1189,
+      "imprint": null
+    },
+    {
+      "isbn10": "0356503968",
+      "isbn13": "9780356503967",
+      "title": "Gathering Storm",
+      "slug": "gathering-storm",
+      "published": "2014",
+      "physicalFormat": "Paperback",
+      "pages": 848,
+      "imprint": null
+    },
+    {
+      "isbn10": "0765337835",
+      "isbn13": "9780765337832",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2015",
+      "physicalFormat": "Trade Paperback",
+      "pages": 800,
+      "imprint": "Tor Books"
+    },
+    {
+      "isbn10": "1250252601",
+      "isbn13": "9781250252609",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2020",
+      "physicalFormat": "Mass Market Paperbound",
+      "pages": 880,
+      "imprint": null
+    },
+    {
+      "isbn10": "8445007114",
+      "isbn13": "9788445007112",
+      "title": "La Rueda del Tiempo Nº 12/14 la Tormenta",
+      "slug": "la-rueda-del-tiempo-no-12-14-la-tormenta",
+      "published": "2021",
+      "physicalFormat": "Paperback",
+      "pages": 832,
+      "imprint": null
+    },
+    {
+      "isbn10": "035651711X",
+      "isbn13": "9780356517117",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": "2021",
+      "physicalFormat": "Paperback",
+      "pages": 848,
+      "imprint": null
+    },
+    {
+      "isbn10": "0616838824",
+      "isbn13": "9780616838822",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": null,
+      "physicalFormat": null,
+      "pages": null,
+      "imprint": null
+    },
+    {
+      "isbn10": "0792766199",
+      "isbn13": "9780792766193",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": null,
+      "physicalFormat": null,
+      "pages": null,
+      "imprint": null
+    },
+    {
+      "isbn10": "0792768124",
+      "isbn13": "9780792768128",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": null,
+      "physicalFormat": null,
+      "pages": null,
+      "imprint": null
+    },
+    {
+      "isbn10": "1427218625",
+      "isbn13": "9781427218629",
+      "title": "The Gathering Storm",
+      "slug": "the-gathering-storm",
+      "published": null,
+      "physicalFormat": null,
+      "pages": null,
+      "imprint": null
+    }
+  ],
+  "previousEdition": {
+    "isbn10": "3820098135",
+    "isbn13": "9783820098136",
+    "title": "The Gathering Storm",
+    "slug": "the-gathering-storm",
+    "published": "2009",
+    "physicalFormat": null,
+    "pages": null,
+    "imprint": null
+  },
+  "nextEdition": {
+    "isbn10": "1429960833",
+    "isbn13": "9781429960830",
+    "title": "The Gathering Storm",
+    "slug": "the-gathering-storm",
+    "published": "2009",
+    "physicalFormat": "e-Book",
+    "pages": 784,
+    "imprint": null
+  },
+  "physicalDimensions": null,
+  "ratings": {
+    "summary": {
+      "average": 4.448430493273543,
+      "count": 892,
+      "sum": 0
+    },
+    "counts": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    }
+  },
+  "language": "English",
+  "saleStatus": null,
+  "excerpt": null,
+  "reviewQuotes": null,
+  "retailLinks": null,
+  "categories": null,
+  "aiSummary": null,
+  "canonicalEditionId": 15595955,
+  "languageCode": "en",
+  "publishDatePrecision": "day",
+  "estimatedReadTime": 1176,
+  "languagesCount": 3,
+  "link": "https://www.isbnlab.com/book/9780765302304/the-gathering-storm",
+  "isbnModel": {
+    "isbn10": "0765302306",
+    "isbn10Formatted": "0-7653-0230-6",
+    "isbn13": "9780765302304",
+    "isbn13Formatted": "978-0-7653-0230-4",
+    "ean": "9780765302304",
+    "asin": "0765302306",
+    "prefix": "978",
+    "registrationGroup": "0",
+    "registrationGroupName": "English language",
+    "groupIdentifier": "978-0",
+    "registrant": "7653",
+    "publication": "0230",
+    "checkDigit": "4"
+  },
+  "otherEditionsCount": 24
+}
