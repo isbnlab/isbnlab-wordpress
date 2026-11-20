@@ -24,6 +24,7 @@ final class ISBNLab_WooCommerce {
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue' ) );
 		add_action( 'wp_ajax_isbnlab_preview', array( __CLASS__, 'ajax_preview' ) );
 		add_action( 'wp_ajax_isbnlab_apply', array( __CLASS__, 'ajax_apply' ) );
+		add_action( 'admin_notices', array( __CLASS__, 'show_apply_notes' ) );
 	}
 
 	/**
@@ -120,7 +121,7 @@ final class ISBNLab_WooCommerce {
 						<label><input type="checkbox" name="isbnlab_fields[]" value="<?php echo esc_attr( $key ); ?>" <?php checked( $field['default'] ); ?> /> <?php echo esc_html( $field['label'] ); ?></label>
 					<?php endforeach; ?>
 				</fieldset>
-				<p class="description"><?php esc_html_e( 'This saves the product and reloads the page. Save other changes first.', 'isbnlab' ); ?></p>
+				<p class="description"><?php esc_html_e( 'Book data has no price, so set the price and stock yourself. This saves the product and reloads the page, so save other changes first.', 'isbnlab' ); ?></p>
 				<button type="button" class="button button-primary" id="isbnlab-apply"><?php esc_html_e( 'Apply to product', 'isbnlab' ); ?></button>
 			</div>
 		</div>
@@ -163,11 +164,21 @@ final class ISBNLab_WooCommerce {
 	 * AJAX: look up an ISBN and return a preview.
 	 */
 	public static function ajax_preview() {
-		self::check_request();
-		$book = self::lookup();
+		$post_id = self::check_request();
+		$book    = self::lookup();
 
 		ob_start();
 		self::render_preview( $book );
+
+		$other = self::product_with( 'any', $book->isbn13(), $post_id );
+		if ( $other ) {
+			printf(
+				'<p class="isbnlab-existing">%s <a href="%s">%s</a></p>',
+				esc_html__( 'Already in your store:', 'isbnlab' ),
+				esc_url( (string) get_edit_post_link( $other->get_id(), 'raw' ) ),
+				esc_html( $other->get_name() )
+			);
+		}
 
 		wp_send_json_success(
 			array(
@@ -193,6 +204,7 @@ final class ISBNLab_WooCommerce {
 		$fields = array_intersect( $fields, array_keys( self::fields() ) );
 
 		$notes = self::apply( $product, $book, $fields );
+		set_transient( self::notes_key( $post_id ), $notes, 5 * MINUTE_IN_SECONDS );
 
 		wp_send_json_success( array( 'notes' => $notes ) );
 	}
@@ -222,22 +234,42 @@ final class ISBNLab_WooCommerce {
 		}
 
 		if ( isset( $want['gtin'] ) && '' !== $book->isbn13() ) {
-			if ( method_exists( $product, 'set_global_unique_id' ) ) {
-				try {
-					$product->set_global_unique_id( $book->isbn13() );
-				} catch ( WC_Data_Exception $e ) {
-					$notes[] = $e->getMessage();
+			if ( ! method_exists( $product, 'set_global_unique_id' ) ) {
+				$notes[] = __( 'This WooCommerce version has no GTIN/ISBN field (it arrived in 9.2), so the ISBN is in the attributes only.', 'isbnlab' );
+			} elseif ( $product->get_global_unique_id() !== $book->isbn13() ) {
+				$other = self::product_with( 'gtin', $book->isbn13(), $product->get_id() );
+				if ( $other ) {
+					$notes[] = sprintf(
+						/* translators: 1: other product's name, 2: ISBN. */
+						__( 'The GTIN/ISBN field was left as it was: "%1$s" already has %2$s there, and WooCommerce allows each GTIN on one product only. The ISBN is in the attributes.', 'isbnlab' ),
+						$other->get_name(),
+						$book->isbn13()
+					);
+				} else {
+					try {
+						$product->set_global_unique_id( $book->isbn13() );
+					} catch ( WC_Data_Exception $e ) {
+						$notes[] = $e->getMessage();
+					}
 				}
-			} else {
-				$notes[] = __( 'This WooCommerce version has no GTIN/ISBN field (it arrived in 9.2), so the ISBN was saved as an attribute only.', 'isbnlab' );
 			}
 		}
 
-		if ( isset( $want['sku'] ) && '' !== $book->isbn13() ) {
-			try {
-				$product->set_sku( $book->isbn13() );
-			} catch ( WC_Data_Exception $e ) {
-				$notes[] = $e->getMessage();
+		if ( isset( $want['sku'] ) && '' !== $book->isbn13() && $product->get_sku() !== $book->isbn13() ) {
+			$other = self::product_with( 'sku', $book->isbn13(), $product->get_id() );
+			if ( $other ) {
+				$notes[] = sprintf(
+					/* translators: 1: other product's name, 2: ISBN. */
+					__( 'The SKU was left as it was: "%1$s" already has the SKU %2$s, and WooCommerce allows each SKU on one product only.', 'isbnlab' ),
+					$other->get_name(),
+					$book->isbn13()
+				);
+			} else {
+				try {
+					$product->set_sku( $book->isbn13() );
+				} catch ( WC_Data_Exception $e ) {
+					$notes[] = $e->getMessage();
+				}
 			}
 		}
 
@@ -259,6 +291,88 @@ final class ISBNLab_WooCommerce {
 		$product->save();
 
 		return $notes;
+	}
+
+	/**
+	 * Another product that already uses this ISBN, as its GTIN, its SKU, or (for 'any') either
+	 * of those or an earlier ISBNLab fill.
+	 *
+	 * @param string $where      'gtin', 'sku' or 'any'.
+	 * @param string $isbn13     ISBN-13.
+	 * @param int    $exclude_id The product being edited.
+	 * @return WC_Product|null
+	 */
+	public static function product_with( $where, $isbn13, $exclude_id ) {
+		$ids = array();
+
+		if ( ( 'gtin' === $where || 'any' === $where ) && function_exists( 'wc_get_product_id_by_global_unique_id' ) ) {
+			$ids[] = (int) wc_get_product_id_by_global_unique_id( $isbn13 );
+		}
+		if ( 'sku' === $where || 'any' === $where ) {
+			$ids[] = (int) wc_get_product_id_by_sku( $isbn13 );
+		}
+		if ( 'any' === $where ) {
+			$ids = array_merge(
+				$ids,
+				get_posts(
+					array(
+						'post_type'      => 'product',
+						'post_status'    => array( 'publish', 'draft', 'pending', 'private', 'future' ),
+						'posts_per_page' => 2,
+						'fields'         => 'ids',
+						'meta_key'       => self::META_ISBN, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- once per lookup.
+						'meta_value'     => $isbn13, // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+					)
+				)
+			);
+		}
+
+		foreach ( $ids as $id ) {
+			$id = (int) $id;
+			if ( $id && $id !== (int) $exclude_id ) {
+				$product = wc_get_product( $id );
+				if ( $product ) {
+					return $product;
+				}
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * Show the notes from the last "Apply to product" once the page has reloaded.
+	 */
+	public static function show_apply_notes() {
+		$screen = get_current_screen();
+		if ( ! $screen || 'product' !== $screen->post_type || 'post' !== $screen->base ) {
+			return;
+		}
+
+		$post_id = isset( $_GET['post'] ) ? absint( $_GET['post'] ) : 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- only reads a notice.
+		$key     = self::notes_key( $post_id );
+		$notes   = get_transient( $key );
+
+		if ( ! is_array( $notes ) ) {
+			return;
+		}
+		delete_transient( $key );
+
+		echo '<div class="notice notice-success is-dismissible"><p><strong>' . esc_html__( 'Filled from ISBNLab. Set the price and stock yourself.', 'isbnlab' ) . '</strong></p>';
+		foreach ( $notes as $note ) {
+			echo '<p>' . esc_html( $note ) . '</p>';
+		}
+		echo '</div>';
+	}
+
+	/**
+	 * Transient key for one user's apply notes on one product.
+	 *
+	 * @param int $post_id Product id.
+	 * @return string
+	 */
+	private static function notes_key( $post_id ) {
+		return 'isbnlab_notes_' . get_current_user_id() . '_' . (int) $post_id;
 	}
 
 	/**

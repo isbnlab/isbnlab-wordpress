@@ -73,7 +73,7 @@ if grep -qiE 'fatal error|warning:|notice:|deprecated:' <<< "$page"; then echo "
 
 echo "== Plugin Check"
 wp plugin install plugin-check --activate > /dev/null
-wp plugin check isbnlab --exclude-directories=tests,bin,dist,.git,.github --exclude-files=README.md,.gitignore,.gitattributes --format=table || true
+wp plugin check isbnlab --exclude-directories=tests,bin,dist,playground,.git,.github --exclude-files=README.md,.gitignore,.gitattributes --format=table || true
 
 if [ -n "${KEEP:-}" ]; then
 	echo "Site left running at http://localhost:$PORT/wp-admin (admin / admin). Remove with: docker rm -f $NAME-wp $NAME-db; docker network rm $NAME; docker volume rm $NAME-html"

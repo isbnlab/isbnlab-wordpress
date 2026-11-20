@@ -95,9 +95,7 @@
 					lookupButton.disabled = false;
 					return;
 				}
-				if ( json.data.notes && json.data.notes.length ) {
-					window.alert( json.data.notes.join( '\n' ) );
-				}
+				// Any notes are shown as an admin notice after the reload (ISBNLab_WooCommerce::show_apply_notes).
 				// The product was saved on the server; stop the editor asking about unsaved changes.
 				if ( window.jQuery ) {
 					window.jQuery( window ).off( 'beforeunload' );

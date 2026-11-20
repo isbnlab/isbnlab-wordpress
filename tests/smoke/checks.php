@@ -108,8 +108,13 @@ $check( 'reapply: SKU', '9780765302304' === $product->get_sku() );
 $other = new WC_Product_Simple();
 $other->set_name( 'other' );
 $other->save();
-$notes = ISBNLab_WooCommerce::apply( $other, $book, array( 'sku' ) );
-$check( 'duplicate SKU is reported, not fatal', 1 === count( $notes ) );
+$check( 'lookup finds the existing product', $product->get_id() === ( ISBNLab_WooCommerce::product_with( 'any', '9780765302304', $other->get_id() ) ?: new WC_Product_Simple() )->get_id() );
+$check( 'the product itself is not "existing"', null === ISBNLab_WooCommerce::product_with( 'any', '9780765302304', $product->get_id() ) );
+$notes = ISBNLab_WooCommerce::apply( $other, $book, array( 'title', 'sku', 'gtin', 'attributes' ) );
+$other = wc_get_product( $other->get_id() );
+$check( 'duplicate SKU and GTIN: one plain note each', 2 === count( $notes ) && false !== strpos( $notes[0], 'already has 9780765302304' ) && false !== strpos( $notes[1], 'already has the SKU' ) );
+$check( 'duplicate: the rest is still filled and saved', 'The Gathering Storm' === $other->get_name() && '9780765302304' === $other->get_attribute( 'ISBN-13' ) && '' === $other->get_global_unique_id() );
+$check( 'reapply to the same product: no duplicate notes', array() === ISBNLab_WooCommerce::apply( $product, $book, array( 'gtin', 'sku' ) ) );
 
 // Shortcode and block.
 $html = do_shortcode( '[isbnlab_book isbn="9780765302304"]' );

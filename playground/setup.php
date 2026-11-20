@@ -14,6 +14,8 @@ update_option( 'woocommerce_onboarding_profile', array( 'skipped' => true ) );
 update_option( 'woocommerce_coming_soon', 'no' );
 update_option( 'woocommerce_store_pages_only', 'no' );
 update_option( 'woocommerce_task_list_hidden', 'yes' );
+// WooCommerce sends the first admin visit within 30 seconds of activation to its setup wizard.
+delete_transient( '_wc_activation_redirect' );
 
 $book = ISBNLab_Client::example_book();
 
