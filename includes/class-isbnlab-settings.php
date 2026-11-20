@@ -221,6 +221,11 @@ final class ISBNLab_Settings {
 			'<p><button type="button" class="button" id="isbnlab-test-connection">%s</button> <span id="isbnlab-test-result" role="status"></span></p>',
 			esc_html__( 'Test connection', 'isbnlab' )
 		);
+
+		/**
+		 * Fires below the API token field on Settings > ISBNLab, for a note of your own.
+		 */
+		do_action( 'isbnlab_after_token_field' );
 	}
 
 	/**
