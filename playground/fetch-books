@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Refreshes the demo's sample books from the API: playground/books/books.json and the covers.
+# Usage: ISBNLAB_API_TOKEN=... playground/fetch-books
+# The token stays in the environment. Each line of books/list.txt is "<shelf> <isbn13>".
+set -euo pipefail
+: "${ISBNLAB_API_TOKEN:?Set ISBNLAB_API_TOKEN}"
+
+dir="$(cd "$(dirname "$0")/books" && pwd)"
+tmp="$(mktemp -d)"
+trap 'rm -rf "$tmp"' EXIT
+
+while read -r shelf isbn; do
+	[ -n "${isbn:-}" ] || continue
+	for try in 1 2 3; do
+		code=$(curl -s -o "$tmp/$isbn.raw" -w '%{http_code}' -H "Authorization: Bearer $ISBNLAB_API_TOKEN" \
+			-H 'Accept: application/json' "https://www.isbnlab.com/api/book/isbn/$isbn")
+		[ "$code" = 429 ] || break
+		sleep 2
+	done
+	[ "$code" = 200 ] || { echo "$isbn: HTTP $code" >&2; exit 1; }
+	# Only the fields the plugin reads.
+	docker run --rm -i ghcr.io/jqlang/jq --arg shelf "$shelf" '{shelf: $shelf} + {book: {
+		title, subtitle, isbn13, isbn10, description, link, language, languageCode, numberOfPages, physicalFormat,
+		publishDate, publishDatePrecision, ratings, genres: (.genres // [])[:4], subjects: (.subjects // [])[:6],
+		publishers: (.publishers // [])[:1], authors: ((.authors // []) | map({name})),
+		series: (if (.series | type) == "object" then (.series | {name, number}) else .series end),
+		covers: (.covers // [])[:1]
+	}}' < "$tmp/$isbn.raw" > "$tmp/$isbn.json"
+	curl -sf -o "$dir/$isbn.jpg" "https://covers.isbnlab.com/$isbn.jpg"
+	echo "$shelf $isbn"
+	sleep 1.2
+done < "$dir/list.txt"
+
+docker run --rm -v "$dir":/b alpine sh -c 'apk add -q imagemagick imagemagick-jpeg >/dev/null; for f in /b/*.jpg; do magick "$f" -resize "400x>" -strip -quality 82 "$f"; done'
+cat "$tmp"/*.json | docker run --rm -i ghcr.io/jqlang/jq -s 'sort_by(.book.isbn13)' > "$dir/books.json"

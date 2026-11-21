@@ -1,0 +1,2109 @@
+[
+  {
+    "shelf": "mystery",
+    "book": {
+      "title": "And Then There Were None",
+      "subtitle": "The World’s Favourite Agatha Christie Book",
+      "isbn13": "9780008123208",
+      "isbn10": "0008123209",
+      "description": "The book that topped the international online poll held in Agatha Christie’s 125th birthday year to discover which of her 80 crime books was the world’s favourite. 1939. Europe teeters on the brink of war. Ten strangers are invited to Soldier Island, an isolated rock near the Devon coast. Cut off from the mainland, with their generous hosts Mr and Mrs U.N. Owen mysteriously absent, they are each accused of a terrible crime. When one of the party dies suddenly they realise they may be harbouring a murderer among their number. The 10 strangers include a reckless playboy, a troubled Harley Street doctor, a formidable judge, an uncouth detective, an unscrupulous mercenary, a God-fearing spinster, two restless servants, a highly decorated general and an anxious secretary. One by one they are picked off. Who will survive? And who is the killer? Copies of an ominous nursery rhyme hang in each room, the murders mimicking the awful fates of its ‘Ten Little Soldier Boys’. The clear winner in an international online poll held to discover the world’s favourite Agatha Christie book, this new paperback also coincides with a new 3-part BBC TV adaptation featuring a stellar ensemble cast: Douglas Booth, Charles Dance, Maeve Dermody, Burn Gorman, Anna Maxwell Martin, Sam Neill, Miranda Richardson, Toby Stephens, Noah Taylor and Aidan Turner.",
+      "link": "https://www.isbnlab.com/book/9780008123208/and-then-there-were-none",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 320,
+      "physicalFormat": "Paperback",
+      "publishDate": "1944-01-01T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.2310943060498225,
+          "count": 2248,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [],
+      "subjects": [
+        {
+          "id": 51,
+          "slug": "fiction",
+          "name": "Fiction"
+        },
+        {
+          "id": 314,
+          "slug": "mystery",
+          "name": "Mystery"
+        },
+        {
+          "id": 1185113,
+          "slug": "mystery-and-crime",
+          "name": "Mystery And Crime"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4329908,
+          "slug": "harpercollins-publishers-inc",
+          "name": "Harpercollins Publishers, Inc."
+        }
+      ],
+      "authors": [
+        {
+          "name": "Agatha Christie"
+        }
+      ],
+      "series": {
+        "name": "Agatha Christie Graphic Novels",
+        "number": 3
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780008123208.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "classics",
+    "book": {
+      "title": "To Kill a Mockingbird",
+      "subtitle": null,
+      "isbn13": "9780061120084",
+      "isbn10": "0061120081",
+      "description": "<p><b>Voted America's Best-Loved Novel in PBS's <i>The Great American Read</i></b></p><p><b>\"One of the most—if not the most—beloved of American novels.\" —<i>The New Yorker</i></b></p><p><b>Harper Lee's Pulitzer Prize-winning masterwork of honor and injustice in the deep South—and the heroism of one man in the face of blind and violent hatred</b></p><p>One of the most cherished stories of all time, <i>To Kill a Mockingbird</i> has been translated into more than forty languages, sold more than fifty million copies worldwide, and was voted one of the best novels of the twentieth century by librarians across the country. A gripping, heart-wrenching, and wholly remarkable tale of coming-of-age in a South poisoned by virulent prejudice, it views a world of great beauty and savage inequities through the eyes of a young girl, Scout Finch, as her father, Atticus—a crusading local lawyer—risks everything to defend a black man unjustly accused of a terrible crime.</p><p>Harper Lee explores with rich humor and unswerving honesty the irrationality of adult attitudes toward race and class in the Deep South of the 1930s. The conscience of a town steeped in prejudice, violence, and hypocrisy is pricked by the stamina and quiet heroism of one man's struggle for justice—but the weight of history will only tolerate so much.</p>",
+      "link": "https://www.isbnlab.com/book/9780061120084/to-kill-a-mockingbird",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 336,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2006-05-23T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.169953350296861,
+          "count": 4716,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1478,
+          "slug": "FIC004000",
+          "name": "FICTION / Classics"
+        },
+        {
+          "id": 1757,
+          "slug": "FIC084030",
+          "name": "FICTION / World Literature / American / 20th Century"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 51,
+          "slug": "fiction",
+          "name": "Fiction"
+        },
+        {
+          "id": 1536,
+          "slug": "literature",
+          "name": "Literature"
+        },
+        {
+          "id": 15079,
+          "slug": "translation",
+          "name": "Translation"
+        },
+        {
+          "id": 17549,
+          "slug": "psychological-fiction",
+          "name": "Psychological Fiction"
+        },
+        {
+          "id": 41278,
+          "slug": "family-saga",
+          "name": "Family Saga"
+        },
+        {
+          "id": 157715,
+          "slug": "mockingbird",
+          "name": "Mockingbird"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 1,
+          "slug": "harpercollins",
+          "name": "HarperCollins"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Harper Lee"
+        }
+      ],
+      "series": {
+        "name": "To Kill a Mockingbird",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780061120084.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "nonfiction",
+    "book": {
+      "title": "Sapiens",
+      "subtitle": "A Brief History of Humankind",
+      "isbn13": "9780062316097",
+      "isbn10": "0062316095",
+      "description": "Hace 100.000 años al menos seis especies de humanos habitaban la Tierra. Hoy solo queda una, la nuestra: Homo sapiens. ¿Cómo logró nuestra especie imponerse en la lucha por la existencia? ¿Por qué nuestros ancestros recolectores se unieron para crear ciudades y reinos? ¿Cómo llegamos a creer en dioses, en naciones o en los derechos humanos; a confiar en el dinero, en los libros o en las leyes? ¿Cómo acabamos sometidos a la burocracia, a los horarios y al consumismo? ¿Y cómo será el mundo en los milenios venideros? En De animales a dioses Yuval Noah Harari traza una breve historia de la humanidad, desde los primeros humanos que caminaron sobre la Tierra hasta los radicales y a veces devastadores avances de las tres grandes revoluciones que nuestra especie ha protagonizado: la cognitiva, la agrícola y la científica. A partir de hallazgos de disciplinas tan diversas como la biología, la antropología, la paleontología o la economía, Harari explora cómo las grandes corrientes de la historia han modelado nuestra sociedad, los animales y las plantas que nos rodean e incluso nuestras personalidades. ¿Hemos ganado en felicidad a medida que ha avanzado la historia? ¿Seremos capaces de liberar alguna vez nuestra conducta de la herencia del pasado? ¿Podemos hacer algo para influir en los siglos futuros? Audaz, ambicioso y provocador, este libro cuestiona todo lo Hace 100.000 años al menos seis especies de humanos habitaban la Tierra. Hoy solo queda una, la nuestra: Homo sapiens. ¿Cómo logró nuestra especie imponerse en la lucha por la existencia? ¿Por qué nuestros ancestros recolectores se unieron para crear ciudades y reinos? ¿Cómo llegamos a creer en dioses, en naciones o en los derechos humanos; a confiar en el dinero, en los libros o en las leyes? ¿Cómo acabamos sometidos a la burocracia, a los horarios y al consumismo? ¿Y cómo será el mundo en los milenios venideros? En Sapiens Yuval Noah Harari traza una breve historia de la humanidad, desde los primeros humanos que caminaron sobre la Tierra hasta los radicales y a veces devastadores avances de las tres grandes revoluciones que nuestra especie ha protagonizado: la cognitiva, la agrícola y la científica. A partir de hallazgos de disciplinas tan diversas como la biología, la antropología, la paleontología o la economía, Harari explora cómo las grandes corrientes de la historia han modelado nuestra sociedad, los animales y las plantas que nos rodean e incluso nuestras personalidades. ¿Hemos ganado en felicidad a medida que ha avanzado la historia? ¿Seremos capaces de liberar alguna vez nuestra conducta de la herencia del pasado? ¿Podemos hacer algo para influir en los siglos futuros? Audaz, ambicioso y provocador, este libro cuestiona todo lo que creíamos saber sobre el ser humano: nuestros orígenes, nuestras ideas, nuestras acciones, nuestro poder... y nuestro futuro.que creíamos saber sobre el ser humano: nuestros orígenes, nuestras ideas, nuestras acciones, nuestro poder... y nuestro futuro.",
+      "link": "https://www.isbnlab.com/book/9780062316097/sapiens",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 464,
+      "physicalFormat": "Hardback",
+      "publishDate": "2015-02-10T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.169584792396198,
+          "count": 1999,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 2211,
+          "slug": "HIS037000",
+          "name": "HISTORY / World"
+        },
+        {
+          "id": 4456,
+          "slug": "SCI027000",
+          "name": "SCIENCE / Life Sciences / Evolution"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 24,
+          "slug": "reference",
+          "name": "Reference"
+        },
+        {
+          "id": 112,
+          "slug": "psychology",
+          "name": "Psychology"
+        },
+        {
+          "id": 173,
+          "slug": "history",
+          "name": "History"
+        },
+        {
+          "id": 176,
+          "slug": "science",
+          "name": "Science"
+        },
+        {
+          "id": 998,
+          "slug": "civilization",
+          "name": "Civilization"
+        },
+        {
+          "id": 1883,
+          "slug": "evolution",
+          "name": "Evolution"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 745241,
+          "slug": "harper",
+          "name": "Harper"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Yuval Noah Harari"
+        }
+      ],
+      "series": {
+        "name": "Homo",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780062316097.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "kids",
+    "book": {
+      "title": "Charlotte's Web",
+      "subtitle": "A Newbery Honor Award Winner",
+      "isbn13": "9780064400558",
+      "isbn10": "0064400557",
+      "description": "<p>Sixty years ago, on October 15, 1952, E.B. White's <i>Charlotte's Web</i> was published. It's gone on to become one of the most beloved children's books of all time. To celebrate this milestone, the renowned Newbery Medalist Kate DiCamillo has written a heartfelt and poignant tribute to the book that is itself a beautiful translation of White's own view of the world—of the joy he took in the change of seasons, in farm life, in the miracles of life and death, and, in short, the glory of everything.</p>\n<p>We are proud to include Kate DiCamillo's foreword in the 60th anniversary editions of this cherished classic.</p>\n<p><i>Charlotte's Web</i> is the story of a little girl named Fern who loved a little pig named Wilbur—and of Wilbur's dear friend Charlotte A. Cavatica, a beautiful large grey spider who lived with Wilbur in the barn.</p>\n<p>With the help of Templeton, the rat who never did anything for anybody unless there was something in it for him, and by a wonderfully clever plan of her own, Charlotte saved the life of Wilbur, who by this time had grown up to quite a pig.</p>\n<p>How all this comes about is Mr. White's story. It is a story of the magic of childhood on the farm. The thousands of children who loved Stuart Little, the heroic little city mouse, will be entranced with Charlotte the spider, Wilbur the pig, and Fern, the little girl who understood their language.</p>\n<p>The forty-seven black-and-white drawings by Garth Williams have all the wonderful detail and warmhearted appeal that children love in his work. Incomparably matched to E.B. White's marvelous story, they speak to each new generation, softly and irresistibly.</p>\n\n\n                        <p>Wilbur the pig is desolate when he discovers that he is destined to be the farmer's Christmas dinner until his spider friend, Charlotte decides to help him.\n</p>",
+      "link": "https://www.isbnlab.com/book/9780064400558/charlotte-s-web",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 352,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "1974-05-15T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 3.963793103448276,
+          "count": 1160,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 2793,
+          "slug": "JUV007000",
+          "name": "JUVENILE FICTION / Classics"
+        },
+        {
+          "id": 3014,
+          "slug": "JUV039090",
+          "name": "JUVENILE FICTION / Social Themes / New Experience"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 226,
+          "slug": "animals",
+          "name": "Animals"
+        },
+        {
+          "id": 386,
+          "slug": "juvenile-fiction",
+          "name": "Juvenile Fiction"
+        },
+        {
+          "id": 393,
+          "slug": "death",
+          "name": "Death"
+        },
+        {
+          "id": 787,
+          "slug": "fantasy",
+          "name": "Fantasy"
+        },
+        {
+          "id": 1066,
+          "slug": "refugees",
+          "name": "Refugees"
+        },
+        {
+          "id": 1267,
+          "slug": "death-grief-bereavement",
+          "name": "Death, Grief, Bereavement"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 1,
+          "slug": "harpercollins",
+          "name": "HarperCollins"
+        }
+      ],
+      "authors": [
+        {
+          "name": "E. B. White"
+        },
+        {
+          "name": "Kate DiCamillo"
+        }
+      ],
+      "series": {
+        "name": "Charlotte's web",
+        "number": null
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780064400558.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "classics",
+    "book": {
+      "title": "Nineteen Eighty Four",
+      "subtitle": null,
+      "isbn13": "9780141036144",
+      "isbn10": "0141036141",
+      "description": "<b>The perfect edition for any Orwell enthusiasts' collection, discover the classic dystopian masterpiece beautifully reimagined by renowned street artist Shepard Fairey</b><p>Winston Smith works for the Ministry of Truth in London, chief city of Airstrip One. Big Brother stares out from every poster, the Thought Police uncover every act of betrayal. When Winston finds love with Julia, he discovers that life does not have to be dull and deadening, and awakens to new possibilities. Despite the police helicopters that hover and circle overhead, Winston and Julia begin to question the Party; they are drawn towards conspiracy. Yet Big Brother will not tolerate dissent - even in the mind. For those with original thoughts they invented Room 101. . .</p><p>First published in 1949, <i>1984 </i>is George Orwell's terrifying vision of a totalitarian future in which everything and everyone is slave to a tyrannical regime.</p><p><b>'Right up there among my favourite books . . . I read it again and again' Margaret Atwood</b></p><p><b>'More relevant to today than almost any other book that you can think of' Jo Brand</b></p><p><b>'The book of the twentieth century . . . haunts us with an ever-darker relevance' <i>Independent</i></b></p><p><b>COMPLETE THE TRIO WITH SHEPARD FAIREY'S NEW-LOOK <i>ANIMAL FARM </i>AND<i> DOWN AND OUT IN PARIS AND LONDON.</i></b></p>",
+      "link": "https://www.isbnlab.com/book/9780141036144/nineteen-eighty-four",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 336,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2008-07-29T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.2515981448984705,
+          "count": 7978,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1622,
+          "slug": "FIC028000",
+          "name": "FICTION / Science Fiction / General"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 2604,
+          "slug": "science-fiction",
+          "name": "Science Fiction"
+        },
+        {
+          "id": 46707,
+          "slug": "sci-fi",
+          "name": "Sci-Fi"
+        },
+        {
+          "id": 54734,
+          "slug": "classic",
+          "name": "Classic"
+        },
+        {
+          "id": 128235,
+          "slug": "dystopian-fiction",
+          "name": "Dystopian Fiction"
+        },
+        {
+          "id": 207806,
+          "slug": "science-fiction-books",
+          "name": "Science Fiction Books"
+        },
+        {
+          "id": 207888,
+          "slug": "sci-fi-books",
+          "name": "Sci Fi Books"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4332427,
+          "slug": "penguin-uk",
+          "name": "Penguin Uk"
+        }
+      ],
+      "authors": [
+        {
+          "name": "George Orwell"
+        }
+      ],
+      "series": {
+        "name": "Vintage Collector's Classics",
+        "number": 26
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780141036144.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "classics",
+    "book": {
+      "title": "Pride and Prejudice",
+      "subtitle": null,
+      "isbn13": "9780141439518",
+      "isbn10": "0141439513",
+      "description": "<b>Austen's most popular novel, the unforgettable story of Elizabeth Bennet and Mr. Darcy<br></b><br>Few have failed to be charmed by the witty and independent spirit of Elizabeth Bennet in Austen’s beloved classic <i>Pride and Prejudice</i>. When Elizabeth Bennet first meets eligible bachelor Fitzwilliam Darcy, she thinks him arrogant and conceited; he is indifferent to her good looks and lively mind. When she later discovers that Darcy has involved himself in the troubled relationship between his friend Bingley and her beloved sister Jane, she is determined to dislike him more than ever. In the sparkling comedy of manners that follows, Jane Austen shows us the folly of judging by first impressions and superbly evokes the friendships, gossip and snobberies of provincial middle-class life. This Penguin Classics edition, based on Austen's first edition, contains the original Penguin Classics introduction by Tony Tanner and an updated introduction and notes by Viven Jones.<br><br>For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,700 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators.",
+      "link": "https://www.isbnlab.com/book/9780141439518/pride-and-prejudice",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 448,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2002-12-31T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.163036992840095,
+          "count": 3352,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1478,
+          "slug": "FIC004000",
+          "name": "FICTION / Classics"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 7326,
+          "slug": "classic-fiction",
+          "name": "Classic Fiction"
+        },
+        {
+          "id": 54734,
+          "slug": "classic",
+          "name": "Classic"
+        },
+        {
+          "id": 124573,
+          "slug": "pride-and-prejudice",
+          "name": "Pride And Prejudice"
+        },
+        {
+          "id": 203137,
+          "slug": "jane-austen",
+          "name": "Jane Austen"
+        },
+        {
+          "id": 211655,
+          "slug": "booktok",
+          "name": "Booktok"
+        },
+        {
+          "id": 1181785,
+          "slug": "tiktok",
+          "name": "Tiktok"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 6592,
+          "slug": "penguin-publishing-group",
+          "name": "Penguin Publishing Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Jane Austen"
+        }
+      ],
+      "series": {
+        "name": "Vampire Chronicles",
+        "number": 2
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780141439518.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "kids",
+    "book": {
+      "title": "Charlie and the Chocolate Factory",
+      "subtitle": null,
+      "isbn13": "9780142410318",
+      "isbn10": "0142410314",
+      "description": "<b>From the author of <i>The BFG </i>and <i>Matilda</i>!</b><br><br>Willy Wonka's famous chocolate factory is opening at last! But only five lucky children will be allowed inside. And the winners are: Augustus Gloop, an enormously fat boy whose hobby is eating; Veruca Salt, a spoiled-rotten brat whose parents are wrapped around her little finger; Violet Beauregarde, a dim-witted gum-chewer with the fastest jaws around; Mike Teavee, a toy pistol-toting gangster-in-training who is obsessed with television; and Charlie Bucket, Our Hero, a boy who is honest and kind, brave and true, and good and ready for the wildest time of his life!",
+      "link": "https://www.isbnlab.com/book/9780142410318/charlie-and-the-chocolate-factory",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 192,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2007-08-16T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.040404040404041,
+          "count": 1089,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 2739,
+          "slug": "JUV001000",
+          "name": "JUVENILE FICTION / Action & Adventure / General"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 12150,
+          "slug": "chapter-books",
+          "name": "Chapter Books"
+        },
+        {
+          "id": 61594,
+          "slug": "broadway",
+          "name": "Broadway"
+        },
+        {
+          "id": 203405,
+          "slug": "3rd-grade-reading-books",
+          "name": "3rd Grade Reading Books"
+        },
+        {
+          "id": 203406,
+          "slug": "4th-grade-reading-books",
+          "name": "4th Grade Reading Books"
+        },
+        {
+          "id": 203407,
+          "slug": "5th-grade-reading-books",
+          "name": "5th Grade Reading Books"
+        },
+        {
+          "id": 209800,
+          "slug": "3rd-grade-chapter-books",
+          "name": "3rd Grade Chapter Books"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4325373,
+          "slug": "penguin-young-readers-group",
+          "name": "Penguin Young Readers Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Roald Dahl"
+        }
+      ],
+      "series": {
+        "name": "Charlie Bucket",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780142410318.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "mystery",
+    "book": {
+      "title": "Gone Girl",
+      "subtitle": "A Novel",
+      "isbn13": "9780307588371",
+      "isbn10": "0307588378",
+      "description": "<b><b>#1 <i>NEW YORK TIMES</i> BESTSELLER • The “mercilessly entertaining” (<i>Vanity Fair</i>) instant classic “about the nature of identity and the terrible secrets that can survive and thrive in even the most intimate relationships” (Lev Grossman, <i>Time </i>“One of the Best Books of the Decade”)<b>—now featuring never-before-published deleted scenes</b></b><br><br> THE <i>NEW YORK TIMES’</i>S BEST THRILLER OF THE CENTURY • <i>ONE</i> OF <i>TIME</i>'S 100 BEST MYSTERY AND THRILLER BOOKS OF ALL TIME, ONE OF CNN'S MOST INFLUENTIAL BOOKS OF THE DECADE, AND ONE OF <i>ENTERTAINMENT WEEKLY</i>'S BEST BOOKS OF THE DECADE</b> <br><b><br>ONE OF THE TEN BEST BOOKS OF THE YEAR: Janet Maslin, <i>The New York Times; People; Entertainment Weekly; O: The Oprah Magazine; Slate; Kansas City Star; USA Today; Christian Science Monitor</i></b><br><b><br><b><i>New York Times </i>Readers Pick: 100 Best Books of the 21st Century</b> <br><br></b>On a warm summer morning in North Carthage, Missouri, it is Nick and Amy Dunne’s fifth wedding anniversary. Presents are being wrapped and reservations are being made when Nick’s clever and beautiful wife disappears. Husband-of-the-Year Nick isn’t doing himself any favors with cringe-worthy daydreams about the slope and shape of his wife’s head, but passages from Amy's diary reveal the alpha-girl perfectionist could have put anyone dangerously on edge<b>.</b> Under mounting pressure from the police and the media—as well as Amy’s fiercely doting parents—the town golden boy parades an endless series of lies, deceits, and inappropriate behavior. Nick is oddly evasive, and he’s definitely bitter—but is he really a killer? <br><br><b>ONE OF THE BEST BOOKS OF THE YEAR: <i>San Francisco Chronicle, St. Louis Post-Dispatch, The Chicago Tribune, HuffPost, Newsday<br></i></b>",
+      "link": "https://www.isbnlab.com/book/9780307588371/gone-girl",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 464,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2014-04-22T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 3.976118760757315,
+          "count": 2324,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1535,
+          "slug": "FIC022000",
+          "name": "FICTION / Mystery & Detective / General"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 35207,
+          "slug": "mystery-and-suspense",
+          "name": "Mystery And Suspense"
+        },
+        {
+          "id": 137161,
+          "slug": "mystery-thriller-suspense",
+          "name": "Mystery Thriller Suspense"
+        },
+        {
+          "id": 208520,
+          "slug": "summer-reading",
+          "name": "Summer Reading"
+        },
+        {
+          "id": 209449,
+          "slug": "great-american-read",
+          "name": "Great American Read"
+        },
+        {
+          "id": 209841,
+          "slug": "murder-mystery-books",
+          "name": "Murder Mystery Books"
+        },
+        {
+          "id": 209843,
+          "slug": "mysteries-and-thrillers",
+          "name": "Mysteries And Thrillers"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4345413,
+          "slug": "random-house-publishing-group",
+          "name": "Random House Publishing Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Gillian Flynn"
+        }
+      ],
+      "series": null,
+      "covers": [
+        "https://covers.isbnlab.com/9780307588371.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "mystery",
+    "book": {
+      "title": "The Girl with the Dragon Tattoo",
+      "subtitle": "A Lisbeth Salander Novel",
+      "isbn13": "9780307949486",
+      "isbn10": "0307949486",
+      "description": "a Spellbinding Amalgam Of Murder Mystery, Family Saga, love Story, And Financial Intrigue.it S About The Disappearance Forty Years Ago Of Harriet Vanger, A Young Scion Of One Of The Wealthiest Families In Sweden . . . And About Her Octogenarian Uncle, Determined To Know The Truth About What He Believes Was Her Murder.it S About Mikael Blomkvist, A Crusading Journalist Recently At The Wrong End Of A Libel Case, Hired To Get To The Bottom Of Harriet S Disappearance . . . And About Lisbeth Salander, A Twenty-four-year-old Pierced And Tattooed Genius Hacker Possessed Of The Hard-earned Wisdom Of Someone Twice Her Age Who Assists Blomkvist With The Investigation. This Unlikely Team Discovers A Vein Of Nearly Unfathomable Iniquity Running Through The Vanger Family, Astonishing Corruption In The Highest Echelons Of Swedish Industrialism, And An Unexpected Connection Between Themselves.contagiously Exciting, It S About Society At...the Barnes & Noble Reviewstieg Larsson's First Murder Mystery Has Been A Smash Hit Throughout Europe Since Its 2005 Publication In The Author's Native Sweden, And Has Now Become A Bestseller In The U.s. As Well. But The Bitter Twist In Larsson's Success Story Is That He Didn't Live To See the Girl With The Dragon Tattoo Published: He Died Of A Heart Attack Just After He Delivered The Manuscripts For This Book And The Two That Follow. When The Most Shocking Corpse In The Drawing Room Turns Out To Be The 50-year-old Author's, The Thrills Of Crime Fiction Can Take A Melancholy Turn. But Let's Try, For The Moment, To Evaluate Larsson's Novel Apart From Its Ill-fated Provenance. What Is It That's Generating So Much Enthusiasm From A Gobsmacked International Audience? Mikael Blomkvist, ekonomireporter, döms till fängelse för förtal av finansmannen Wennerström, och beslutar sig för att ta time out från sitt jobb på tidskriften Millennium. I samma veva får han ett ovanligt uppdrag....",
+      "link": "https://www.isbnlab.com/book/9780307949486/the-girl-with-the-dragon-tattoo",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 672,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2011-11-22T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.102659037361158,
+          "count": 2971,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1543,
+          "slug": "FIC022080",
+          "name": "FICTION / Mystery & Detective / International Crime & Mystery"
+        },
+        {
+          "id": 1693,
+          "slug": "FIC050000",
+          "name": "FICTION / Crime"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 312,
+          "slug": "thriller",
+          "name": "Thriller"
+        },
+        {
+          "id": 314,
+          "slug": "mystery",
+          "name": "Mystery"
+        },
+        {
+          "id": 209840,
+          "slug": "mystery-books",
+          "name": "Mystery Books"
+        },
+        {
+          "id": 220543,
+          "slug": "book-series",
+          "name": "Book Series"
+        },
+        {
+          "id": 1255602,
+          "slug": "girl-with-the-dragon-tattoo",
+          "name": "Girl With The Dragon Tattoo"
+        },
+        {
+          "id": 1261741,
+          "slug": "stieg-larsson",
+          "name": "Stieg Larsson"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 5427,
+          "slug": "knopf-doubleday-publishing-group",
+          "name": "Knopf Doubleday Publishing Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Stieg Larsson"
+        }
+      ],
+      "series": {
+        "name": "Millennium",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780307949486.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "nonfiction",
+    "book": {
+      "title": "Thinking, Fast and Slow",
+      "subtitle": "Changing the Way You Think to Fulfil Your Potential by Dr Carol Dweck 2 Books Collection Set",
+      "isbn13": "9780374533557",
+      "isbn10": "0374533555",
+      "description": "*Major New York Times Bestseller*More than 2.6 million copies sold*One of The New York Times Book Review's ten best books of the year*Selected by The Wall Street Journal as one of the best nonfiction books of the year*Presidential Medal of Freedom Recipient*Daniel Kahneman's work with Amos Tversky is the subject of Michael Lewis's best-selling The Undoing Project: A Friendship That Changed Our MindsIn his mega bestseller, Thinking, Fast and Slow, Daniel Kahneman, world-famous psychologist and winner of the Nobel Prize in Economics, takes us on a groundbreaking tour of the mind and explains the two systems that drive the way we think. System 1 is fast, intuitive, and emotional; System 2 is slower, more deliberative, and more logical. The impact of overconfidence on corporate strategies, the difficulties of predicting what will make us happy in the future, the profound effect of cognitive biases on everything from playing the stock market to planning our next vacation—each of these can be understood only by knowing how the two systems shape our judgments and decisions.Engaging the reader in a lively conversation about how we think, Kahneman reveals where we can and cannot trust our intuitions and how we can tap into the benefits of slow thinking. He offers practical and enlightening insights into how choices are made in both our business and our personal lives—and how we can use different techniques to guard against the mental glitches that often get us into trouble. Topping bestseller lists for almost ten years, Thinking, Fast and Slow is a contemporary classic, an essential book that has changed the lives of millions of readers.",
+      "link": "https://www.isbnlab.com/book/9780374533557/thinking-fast-and-slow",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 512,
+      "physicalFormat": "Trade Paperback",
+      "publishDate": "2013-04-02T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.109782608695652,
+          "count": 920,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [],
+      "subjects": [
+        {
+          "id": 112,
+          "slug": "psychology",
+          "name": "Psychology"
+        },
+        {
+          "id": 6051,
+          "slug": "nonfiction",
+          "name": "Nonfiction"
+        },
+        {
+          "id": 66570,
+          "slug": "business-and-economics",
+          "name": "Business&Economics"
+        },
+        {
+          "id": 559580,
+          "slug": "decision-making-and-problem-solving",
+          "name": "Decision Making&Problem Solving"
+        },
+        {
+          "id": 1486108,
+          "slug": "cognitive-psychology-and-cognition",
+          "name": "Cognitive Psychology & Cognition"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 187,
+          "slug": "farrar-straus-and-giroux",
+          "name": "Farrar Straus and Giroux"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Daniel Kahneman"
+        }
+      ],
+      "series": {
+        "name": "30 Minute Expert",
+        "number": null
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780374533557.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "kids",
+    "book": {
+      "title": "The Very Hungry Caterpillar",
+      "subtitle": null,
+      "isbn13": "9780399208539",
+      "isbn10": "0399208534",
+      "description": "<b>THE ICONIC #1 BESTSELLER • The all-time classic picture book starring the world’s favorite caterpillar! Generations of children have grown up on this beautifully dramatized story of a caterpillar who eats his way to becoming a butterfly.<br><br>One of <i>The Atlantic</i>’s 65 Essential Children’s Books<br><br>“Gorgeously illustrated, brilliantly innovative.”—<i>The New York Times Book Review</i><br><br></b><i>In the light of the moon a little egg lay on a leaf. <br>One Sunday morning the warm sun came up and—pop!—out of the egg came a tiny and very hungry caterpillar.</i><b><br></b><br>So begins the journey of Eric Carle’s most beloved storybook character. Follow along as one of nature’s loveliest marvels eats his way through an amazing variety of foods as he prepares to transform into a beautiful butterfly! Children will love the strikingly bold, colorful pictures against a simple text in large, clear type.<br><br>An innovative, entertaining story that teaches little ones about counting and the days of the week, this book doubles as the perfect way to introduce change as a positive and necessary part of life. <i>The Very Hungry Caterpillar </i>is an ideal gift for new babies, baby showers, birthdays, and other new beginnings!",
+      "link": "https://www.isbnlab.com/book/9780399208539/the-very-hungry-caterpillar",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 32,
+      "physicalFormat": "Hardback",
+      "publishDate": "1981-10-15T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.173716012084592,
+          "count": 331,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 2756,
+          "slug": "JUV002140",
+          "name": "JUVENILE FICTION / Animals / Insects, Spiders, etc."
+        }
+      ],
+      "subjects": [
+        {
+          "id": 320,
+          "slug": "baby-books",
+          "name": "Baby Books"
+        },
+        {
+          "id": 12858,
+          "slug": "board-books",
+          "name": "Board Books"
+        },
+        {
+          "id": 14032,
+          "slug": "board-book",
+          "name": "Board Book"
+        },
+        {
+          "id": 214834,
+          "slug": "classic-children-s-books",
+          "name": "Classic Children's Books"
+        },
+        {
+          "id": 245549,
+          "slug": "baby-board-books",
+          "name": "Baby Board Books"
+        },
+        {
+          "id": 1240119,
+          "slug": "classic-kids-books",
+          "name": "Classic Kids Books"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4325373,
+          "slug": "penguin-young-readers-group",
+          "name": "Penguin Young Readers Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Eric Carle"
+        }
+      ],
+      "series": {
+        "name": "Eric Carle's Very Series",
+        "number": null
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780399208539.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "science-fiction",
+    "book": {
+      "title": "Dune",
+      "subtitle": "Book One in the Dune Chronicles",
+      "isbn13": "9780441172719",
+      "isbn10": "0441172717",
+      "description": "<b><b>• DUNE: PART TWO • THE MAJOR MOTION PICTURE<br></b></b>Directed by Denis Villeneuve, screenplay by Denis Villeneuve and Jon Spaihts, based on the novel <i>Dune</i> by Frank Herbert • Starring Timothée Chalamet, Zendaya, Rebecca Ferguson, Josh Brolin, Austin Butler, Florence Pugh, Dave Bautista, Christopher Walken, Stephen McKinley Henderson, Léa Seydoux, with Stellan Skarsgård, with Charlotte Rampling, and Javier Bardem<b><b><br></b><br><b>Frank Herbert’s classic masterpiece—a triumph of the imagination and one of the bestselling science fiction novels of all time.</b></b><br><br>Set on the desert planet Arrakis, <i>Dune</i> is the story of Paul Atreides—who would become known as Muad'Dib—and of a great family's ambition to bring to fruition mankind's most ancient and unattainable dream.<br><br>A stunning blend of adventure and mysticism, environmentalism and politics, <i>Dune</i> won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction.",
+      "link": "https://www.isbnlab.com/book/9780441172719/dune",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 896,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "1990-09-01T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.329373278236915,
+          "count": 5808,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1625,
+          "slug": "FIC028030",
+          "name": "FICTION / Science Fiction / Space Opera"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 46707,
+          "slug": "sci-fi",
+          "name": "Sci-Fi"
+        },
+        {
+          "id": 54734,
+          "slug": "classic",
+          "name": "Classic"
+        },
+        {
+          "id": 207806,
+          "slug": "science-fiction-books",
+          "name": "Science Fiction Books"
+        },
+        {
+          "id": 207888,
+          "slug": "sci-fi-books",
+          "name": "Sci Fi Books"
+        },
+        {
+          "id": 214833,
+          "slug": "classic-books",
+          "name": "Classic Books"
+        },
+        {
+          "id": 1241785,
+          "slug": "dune-books",
+          "name": "Dune Books"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 6592,
+          "slug": "penguin-publishing-group",
+          "name": "Penguin Publishing Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Frank Herbert"
+        }
+      ],
+      "series": {
+        "name": "Dune",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780441172719.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "science-fiction",
+    "book": {
+      "title": "Foundation",
+      "subtitle": null,
+      "isbn13": "9780553293357",
+      "isbn10": "0553293354",
+      "description": "<b>The first novel in Isaac Asimov’s classic science-fiction masterpiece, the Foundation series<br><br>THE EPIC SAGA THAT INSPIRED THE APPLE TV+ SERIES <i>FOUNDATION</i> • Nominated as one of America’s best-loved novels by PBS’s <i>The Great American Read</i></b><br> <br>For twelve thousand years the Galactic Empire has ruled supreme. Now it is dying. But only Hari Seldon, creator of the revolutionary science of psychohistory, can see into the future—to a dark age of ignorance, barbarism, and warfare that will last thirty thousand years. To preserve knowledge and save humankind, Seldon gathers the best minds in the Empire—both scientists and scholars—and brings them to a bleak planet at the edge of the galaxy to serve as a beacon of hope for future generations. He calls his sanctuary the Foundation. <br> <br>The Foundation novels of Isaac Asimov are among the most influential in the history of science fiction, celebrated for their unique blend of breathtaking action, daring ideas, and extensive worldbuilding. In <i>Foundation,</i> Asimov has written a timely and timeless novel of the best—and worst—that lies in humanity, and the power of even a few courageous souls to shine a light in a universe of darkness.",
+      "link": "https://www.isbnlab.com/book/9780553293357/foundation",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 320,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "1991-10-01T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.080103359173126,
+          "count": 2709,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1624,
+          "slug": "FIC028020",
+          "name": "FICTION / Science Fiction / Hard Science Fiction"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 629,
+          "slug": "mysteries",
+          "name": "Mysteries"
+        },
+        {
+          "id": 207959,
+          "slug": "adventure-books",
+          "name": "Adventure Books"
+        },
+        {
+          "id": 209840,
+          "slug": "mystery-books",
+          "name": "Mystery Books"
+        },
+        {
+          "id": 227711,
+          "slug": "classic-literature",
+          "name": "Classic Literature"
+        },
+        {
+          "id": 1183237,
+          "slug": "classic-novels",
+          "name": "Classic Novels"
+        },
+        {
+          "id": 1183487,
+          "slug": "popular-books",
+          "name": "Popular Books"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4414287,
+          "slug": "random-house-worlds",
+          "name": "Random House Worlds"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Isaac Asimov"
+        }
+      ],
+      "series": {
+        "name": "Foundation",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780553293357.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "fantasy",
+    "book": {
+      "title": "A Game of Thrones (HBO Tie-in Edition)",
+      "subtitle": "Book One of a Story of Ice and Fire",
+      "isbn13": "9780553386790",
+      "isbn10": "0553386794",
+      "description": "<b>NOW THE ACCLAIMED HBO SERIES <i>GAME OF THRONES</i>—THE MASTERPIECE THAT BECAME A CULTURAL PHENOMENON</b><br> <br>Here is the first book in the landmark series that has redefined imaginative fiction and become a modern masterpiece.<br> <br><b>A GAME OF THRONES</b><br> <br>In a land where summers can last decades and winters a lifetime, trouble is brewing. The cold is returning, and in the frozen wastes to the North of Winterfell, sinister and supernatural forces are massing beyond the kingdom’s protective Wall. At the center of the conflict lie the Starks of Winterfell, a family as harsh and unyielding as the land they were born to. Sweeping from a land of brutal cold to a distant summertime kingdom of epicurean plenty, here is a tale of lords and ladies, soldiers and sorcerers, assassins and bastards, who come together in a time of grim omens. Amid plots and counterplots, tragedy and betrayal, victory and terror, the fate of the Starks, their allies, and their enemies hangs perilously in the balance, as each endeavors to win that deadliest of conflicts: the game of thrones.<br> <br>A GAME OF THRONES <b>•</b> A CLASH OF KINGS <b>•</b> A STORM OF SWORDS <b>•</b> A FEAST FOR CROWS <b>• </b>A DANCE WITH DRAGONS",
+      "link": "https://www.isbnlab.com/book/9780553386790/a-game-of-thrones-hbo-tie-in-edition",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 720,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2011-03-22T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.410956214411938,
+          "count": 5093,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1495,
+          "slug": "FIC009020",
+          "name": "FICTION / Fantasy / Epic"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 311,
+          "slug": "adventure",
+          "name": "Adventure"
+        },
+        {
+          "id": 1056,
+          "slug": "war",
+          "name": "War"
+        },
+        {
+          "id": 16449,
+          "slug": "supernatural",
+          "name": "Supernatural"
+        },
+        {
+          "id": 21627,
+          "slug": "winter",
+          "name": "Winter"
+        },
+        {
+          "id": 46707,
+          "slug": "sci-fi",
+          "name": "Sci-Fi"
+        },
+        {
+          "id": 223168,
+          "slug": "science-fiction-fantasy-books",
+          "name": "Science Fiction Fantasy Books"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4414287,
+          "slug": "random-house-worlds",
+          "name": "Random House Worlds"
+        }
+      ],
+      "authors": [
+        {
+          "name": "George R.R.Martin"
+        }
+      ],
+      "series": {
+        "name": "A Song of Ice and Fire",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780553386790.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "science-fiction",
+    "book": {
+      "title": "The Martian",
+      "subtitle": "A Novel",
+      "isbn13": "9780553418026",
+      "isbn10": "0553418025",
+      "description": "<b>#1 <i>NEW YORK TIMES </i>BESTSELLER • “Brilliant . . . a celebration of human ingenuity [and] the purest example of real-science sci-fi for many years . . . utterly compelling.”—<i>The Wall Street Journal</i></b><br><b><i> </i></b><br><b>The inspiration for the major motion picture</b><br><b> </b><br>Six days ago, astronaut Mark Watney became one of the first people to walk on Mars. <br><br>Now, he’s sure he’ll be the first person to die there.<br><br>After a dust storm nearly kills him and forces his crew to evacuate while thinking him dead, Mark finds himself stranded and completely alone with no way to even signal Earth that he’s alive—and even if he could get word out, his supplies would be gone long before a rescue could arrive. <br><br>Chances are, though, he won’t have time to starve to death. The damaged machinery, unforgiving environment, or plain-old “human error” are much more likely to kill him first. <br><br>But Mark isn’t ready to give up yet. Drawing on his ingenuity, his engineering skills—and a relentless, dogged refusal to quit—he steadfastly confronts one seemingly insurmountable obstacle after the next. Will his resourcefulness be enough to overcome the impossible odds against him?<br><b> <br><b>NAMED ONE OF <i>PASTE</i>’S BEST NOVELS OF THE DECADE</b><br></b><br>“A hugely entertaining novel [that] reads like a rocket ship afire . . . Weir has fashioned in Mark Watney one of the most appealing, funny, and resourceful characters in recent fiction.”<b>—<i>Chicago Tribune </i></b><br><b> </b><br>“As gripping as they come . . . You’ll be rooting for Watney the whole way, groaning at every setback and laughing at his pitchblack humor. Utterly nail-biting and memorable.”<b>—<i>Financial Times</i></b>",
+      "link": "https://www.isbnlab.com/book/9780553418026/the-martian",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 416,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2014-10-28T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.441817848634781,
+          "count": 5457,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1623,
+          "slug": "FIC028010",
+          "name": "FICTION / Science Fiction / Action & Adventure"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 819,
+          "slug": "humor",
+          "name": "Humor"
+        },
+        {
+          "id": 2604,
+          "slug": "science-fiction",
+          "name": "Science Fiction"
+        },
+        {
+          "id": 168846,
+          "slug": "hard-science-fiction",
+          "name": "Hard Science Fiction"
+        },
+        {
+          "id": 207806,
+          "slug": "science-fiction-books",
+          "name": "Science Fiction Books"
+        },
+        {
+          "id": 208571,
+          "slug": "sci-fi-book",
+          "name": "Sci Fi Book"
+        },
+        {
+          "id": 209449,
+          "slug": "great-american-read",
+          "name": "Great American Read"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4345413,
+          "slug": "random-house-publishing-group",
+          "name": "Random House Publishing Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Andy Weir"
+        }
+      ],
+      "series": {
+        "name": "The Martian",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780553418026.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "kids",
+    "book": {
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "subtitle": null,
+      "isbn13": "9780590353427",
+      "isbn10": "059035342X",
+      "description": "<b>In Harry Potter and the Sorcerer's Stone, Harry, an orphan, lives with the Dursleys, his horrible aunt and uncle, and their abominable son, Dudley.</b> <p>One day just before his eleventh birthday, an owl tries to deliver a mysterious letter-the first of a sequence of events that end in Harry meeting a giant man named Hagrid. Hagrid explains Harry's history to him: When he was a baby, the Dark wizard, Lord Voldemort, attacked and killed his parents in an attempt to kill Harry; but the only mark on Harry was a mysterious lightning-bolt scar on his forehead.</p><p>Now he has been invited to attend Hogwarts School of Witchcraft and Wizardry, where the headmaster is the great wizard Albus Dumbledore. Harry visits Diagon Alley to get his school supplies, especially his very own wand. To get to school, he takes the Hogwarts Express from platform nine and three-quarters at King's Cross Station. On the train, he meets two fellow students who will become his closest friends: Ron Weasley and Hermione Granger.</p><p>Harry is assigned to Gryffindor House at Hogwarts, and soon becomes the youngest-ever Seeker on the House Quidditch team. He also studies Potions with Professor Severus Snape, who displays a deep and abiding dislike for Harry, and Defense Against the Dark Arts with nervous Professor Quirrell; he and his friends defeat a mountain troll, help Hagrid raise a dragon, and explore the wonderful, fascinating world of Hogwarts.</p><p>But all events lead irrevocably toward a second encounter with Lord Voldemort, who seeks an object of legend known as the Sorcerer's Stone...</p>                        <p>Rescued from the outrageous neglect of his aunt and uncle, a young boy with a great destiny proves his worth while attending Hogwarts School for Witchcraft and Wizardry.</p>",
+      "link": "https://www.isbnlab.com/book/9780590353427/harry-potter-and-the-sorcerer-s-stone",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 309,
+      "physicalFormat": "Paperback",
+      "publishDate": "1998-01-01T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.281237197869726,
+          "count": 9764,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [],
+      "subjects": [
+        {
+          "id": 311,
+          "slug": "adventure",
+          "name": "Adventure"
+        },
+        {
+          "id": 386,
+          "slug": "juvenile-fiction",
+          "name": "Juvenile Fiction"
+        },
+        {
+          "id": 387,
+          "slug": "magic",
+          "name": "Magic"
+        },
+        {
+          "id": 418,
+          "slug": "children",
+          "name": "Children"
+        },
+        {
+          "id": 787,
+          "slug": "fantasy",
+          "name": "Fantasy"
+        },
+        {
+          "id": 1258,
+          "slug": "classics",
+          "name": "Classics"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 245,
+          "slug": "scholastic",
+          "name": "Scholastic"
+        }
+      ],
+      "authors": [
+        {
+          "name": "J. K. Rowling"
+        }
+      ],
+      "series": {
+        "name": "Harry Potter",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780590353427.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "fantasy",
+    "book": {
+      "title": "The Hobbit",
+      "subtitle": null,
+      "isbn13": "9780618260300",
+      "isbn10": "0618260307",
+      "description": "<p><strong>\"In a hole in the ground, there lived a hobbit.\" So begins one of the most beloved and delightful tales in the English language. </strong></p><p><strong>Set in the imaginary world of Middle-earth, at once a classic myth and a modern fairy tale, J.R.R. Tolkien's <em>The Hobbit</em> is one of literature's most enduring and well-loved novels. The text in this 372-page paperback edition is based on that first published in Great Britain by Collins Modern Classics and includes a note on the text by Douglas A. Anderson.</strong></p><p>Bilbo Baggins is a hobbit who enjoys a comfortable, unambitious life, rarely traveling any farther than his pantry or cellar. But his contentment is disturbed when the wizard Gandalf and a company of dwarves arrive on his doorstep one day to whisk him away on an adventure. They have launched a plot to raid the treasure hoard guarded by Smaug the Magnificent, a large and very dangerous dragon.</p><p>Bilbo reluctantly joins their quest, unaware that on his journey to the Lonely Mountain he will encounter both a magic ring and a frightening creature known as Gollum.</p><p>Written for Tolkien's own children, <em>The Hobbit </em>has sold many millions of copies worldwide and established itself as a modern classic.</p>",
+      "link": "https://www.isbnlab.com/book/9780618260300/the-hobbit",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 384,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2002-08-15T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.3179237041351195,
+          "count": 6868,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 5199,
+          "slug": "YAF001000",
+          "name": "YOUNG ADULT FICTION / Action & Adventure / General"
+        },
+        {
+          "id": 5261,
+          "slug": "YAF019030",
+          "name": "YOUNG ADULT FICTION / Fantasy / Epic"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 51,
+          "slug": "fiction",
+          "name": "Fiction",
+          "inherited": true
+        },
+        {
+          "id": 54,
+          "slug": "literary-fiction",
+          "name": "Literary Fiction",
+          "inherited": true
+        },
+        {
+          "id": 311,
+          "slug": "adventure",
+          "name": "Adventure",
+          "inherited": true
+        },
+        {
+          "id": 418,
+          "slug": "children",
+          "name": "Children",
+          "inherited": true
+        },
+        {
+          "id": 787,
+          "slug": "fantasy",
+          "name": "Fantasy",
+          "inherited": true
+        },
+        {
+          "id": 907,
+          "slug": "comics",
+          "name": "Comics",
+          "inherited": true
+        }
+      ],
+      "publishers": [
+        {
+          "id": 1,
+          "slug": "harpercollins",
+          "name": "HarperCollins"
+        }
+      ],
+      "authors": [
+        {
+          "name": "J.R.R. Tolkien"
+        }
+      ],
+      "series": {
+        "name": "Middle-earth",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780618260300.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "classics",
+    "book": {
+      "title": "The Great Gatsby",
+      "subtitle": null,
+      "isbn13": "9780684801520",
+      "isbn10": "0684801523",
+      "description": "The Great Gatsby , F. Scott Fitzgerald’s third book, stands as the supreme achievement of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers. The story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when  The New York Times  noted “gin was the national drink and sex the national obsession,” it is an exquisitely crafted tale of America in the 1920s.\nThe Great Gatsby  is one of the great classics of twentieth-century literature.\nAmazon.com Review  In 1922, F. Scott Fitzgerald announced his decision to write \"something  new --something extraordinary and beautiful and simple + intricately patterned.\" That extraordinary, beautiful, intricately patterned, and above all, simple novel became  The Great Gatsby , arguably Fitzgerald's finest work and certainly the book for which he is best known. A portrait of the Jazz Age in all of its decadence and excess,  Gatsby  captured the spirit of the author's generation and earned itself a permanent place in American mythology. Self-made, self-invented millionaire Jay Gatsby embodies some of Fitzgerald's--and his country's--most abiding obsessions: money, ambition, greed, and the promise of new beginnings. \"Gatsby believed in the green light, the orgiastic future that year by year recedes before us. It eluded us then, but that's no matter--tomorrow we will run faster, stretch out our arms farther.... And one fine morning--\" Gatsby's rise to glory and eventual fall from grace becomes a kind of cautionary tale about the American Dream.\nIt's also a love story, of sorts, the narrative of Gatsby's quixotic passion for Daisy Buchanan. The pair meet five years before the novel begins, when Daisy is a legendary young Louisville beauty and Gatsby an impoverished officer. They fall in love, but while Gatsby serves overseas, Daisy marries the brutal, bullying, but extremely rich Tom Buchanan. After the war, Gatsby devotes himself blindly to the pursuit of wealth by whatever means--and to the pursuit of Daisy, which amounts to the same thing. \"Her voice is full of money,\" Gatsby says admiringly, in one of the novel's more famous descriptions. His millions made, Gatsby buys a mansion across Long Island Sound from Daisy's patrician East Egg address, throws lavish parties, and waits for her to appear. When she does, events unfold with all the tragic inevitability of a Greek drama, with detached, cynical neighbor Nick Carraway acting as chorus throughout. Spare, elegantly plotted, and written in crystalline prose,  The Great Gatsby  is as perfectly satisfying as the best kind of poem.\nFrom Publishers Weekly  Readers in that sizeable group of people who think The Great Gatsby is the Great American Novel will be delighted with Robbins's subtle, brainy and immensely touching new reading. There have been audio versions of Gatsby before this-by Alexander Scourby and Christopher Reeve, to name two-but actor/director Robbins brings a fresh and bracing vision that makes the story gleam. From the jaunty irony of the title page quote (\"Lover, gold-hatted, high-bouncing lover, I must have you!\") to the poetry of Fitzgerald's ending about \"the dark fields of the republic\" and \"boats against the current, borne back ceaselessly into the past,\" Robbins conjures up a sublime portrait of a lost world. And as a bonus, the excellent audio actor Robert Sean Leonard reads a selection of Fitzgerald's letters to editors, agents and friends which focus on the writing and selling of the novel. Listeners will revel in learning random factoids, e.g., in 1924, Scott and Zelda were living in a Rome hotel that cost just over $500 a month, and he was respectfully suggesting that his agent Harold Ober ask $15,000 from Liberty magazine for the serial rights to Gatsby.\nCopyright 2002 Reed Business Information, Inc.",
+      "link": "https://www.isbnlab.com/book/9780684801520/the-great-gatsby",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 216,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "1995-06-01T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 3.7165370037901457,
+          "count": 5013,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1475,
+          "slug": "FIC000000",
+          "name": "FICTION / General"
+        },
+        {
+          "id": 1533,
+          "slug": "FIC019000",
+          "name": "FICTION / Literary"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 51,
+          "slug": "fiction",
+          "name": "Fiction"
+        },
+        {
+          "id": 14513,
+          "slug": "traffic-accidents",
+          "name": "Traffic Accidents"
+        },
+        {
+          "id": 16241,
+          "slug": "mistresses",
+          "name": "Mistresses"
+        },
+        {
+          "id": 25559,
+          "slug": "long-island-n-y",
+          "name": "Long Island (N.Y.)"
+        },
+        {
+          "id": 27951,
+          "slug": "revenge",
+          "name": "Revenge"
+        },
+        {
+          "id": 33205,
+          "slug": "rich-people",
+          "name": "Rich People"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4441123,
+          "slug": "simon-and-amp",
+          "name": "Simon &amp"
+        }
+      ],
+      "authors": [
+        {
+          "name": "F. Scott Fitzgerald"
+        }
+      ],
+      "series": {
+        "name": "Vintage Collector's Classics",
+        "number": 21
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780684801520.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "nonfiction",
+    "book": {
+      "title": "Atomic Habits",
+      "subtitle": "An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+      "isbn13": "9780735211292",
+      "isbn10": "0735211299",
+      "description": "<b>The #1<i> New York Times</i> bestseller. <br>Over 25 million copies sold!<br>Translated into 60+ languages!<br> <br><i>Tiny Changes, Remarkable Results</i></b><br><br>No matter your goals, <i>Atomic Habits</i> offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.<br><br>If you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights.<br><br>Clear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. Along the way, readers will be inspired and entertained with true stories from Olympic gold medalists, award-winning artists, business leaders, life-saving physicians, and star comedians who have used the science of small habits to master their craft and vault to the top of their field.<br><br>Learn how to:<br><ul><li>make time for new habits (even when life gets crazy);</li></ul><ul><li>overcome a lack of motivation and willpower;</li></ul><ul><li>design your environment to make success easier;</li></ul><ul><li>get back on track when you fall off course;</li></ul>...and much more.<br><br><i>Atomic Habits</i> will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits--whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal.",
+      "link": "https://www.isbnlab.com/book/9780735211292/atomic-habits",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 320,
+      "physicalFormat": "Hardback",
+      "publishDate": "2018-10-16T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.174545454545455,
+          "count": 2200,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 766,
+          "slug": "BUS085000",
+          "name": "BUSINESS & ECONOMICS / Organizational Behavior"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 1268,
+          "slug": "self-help",
+          "name": "Self-Help"
+        },
+        {
+          "id": 13828,
+          "slug": "motivation",
+          "name": "Motivation"
+        },
+        {
+          "id": 19128,
+          "slug": "best-books",
+          "name": "Best Books"
+        },
+        {
+          "id": 146551,
+          "slug": "habits",
+          "name": "Habits"
+        },
+        {
+          "id": 206337,
+          "slug": "business-books",
+          "name": "Business Books"
+        },
+        {
+          "id": 206344,
+          "slug": "self-help-books",
+          "name": "Self Help Books"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 6592,
+          "slug": "penguin-publishing-group",
+          "name": "Penguin Publishing Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "James Clear"
+        }
+      ],
+      "series": null,
+      "covers": [
+        "https://covers.isbnlab.com/9780735211292.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "fantasy",
+    "book": {
+      "title": "The Name of the Wind",
+      "subtitle": "Winner of the Quill Award",
+      "isbn13": "9780756404741",
+      "isbn10": "0756404746",
+      "description": "<b>Discover #1 <i>New York Times</i>-bestselling Patrick Rothfuss’ epic fantasy series, The Kingkiller Chronicle.</b><br><b> </b><br>“I just love the world of Patrick Rothfuss.” —Lin-Manuel Miranda<br> <br>OVER 1 MILLION COPIES SOLD!<br><b> </b><br><b>DAY ONE: THE NAME OF THE WIND</b><br> <br><i>My name is Kvothe.</i><br><i> </i><br><i>I have stolen princesses back from sleeping barrow kings. I burned down the town of Trebon. I have spent the night with Felurian and left with both my sanity and my life. I was expelled from the University at a younger age than most people are allowed in. I tread paths by moonlight that others fear to speak of during day. I have talked to Gods, loved women, and written songs that make the minstrels weep.</i><br><i> </i><br><i>You may have heard of me.</i><br> <br>So begins a tale unequaled in fantasy literature—the story of a hero told in his own voice. It is a tale of sorrow, a tale of survival, a tale of one man’s search for meaning in his universe, and how that search, and the indomitable will that drove it, gave birth to a legend.",
+      "link": "https://www.isbnlab.com/book/9780756404741/the-name-of-the-wind",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 736,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2008-04-01T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.47835840591185,
+          "count": 3789,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 1495,
+          "slug": "FIC009020",
+          "name": "FICTION / Fantasy / Epic"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 4438,
+          "slug": "fantasy-fiction",
+          "name": "Fantasy Fiction"
+        },
+        {
+          "id": 207554,
+          "slug": "epic-fantasy",
+          "name": "Epic Fantasy"
+        },
+        {
+          "id": 207555,
+          "slug": "fantasy-book",
+          "name": "Fantasy Book"
+        },
+        {
+          "id": 207557,
+          "slug": "epic-fantasy-books",
+          "name": "Epic Fantasy Books"
+        },
+        {
+          "id": 1240611,
+          "slug": "magic-academy",
+          "name": "Magic Academy"
+        },
+        {
+          "id": 1244786,
+          "slug": "dark-fantasy-books",
+          "name": "Dark Fantasy Books"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 14554,
+          "slug": "d-a-w-books-incorporated",
+          "name": "D A W Books, Incorporated"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Patrick Rothfuss"
+        }
+      ],
+      "series": {
+        "name": "Kingkiller Chronicle",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780756404741.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "fantasy",
+    "book": {
+      "title": "The Way of Kings",
+      "subtitle": "Book One of the Stormlight Archive",
+      "isbn13": "9780765326355",
+      "isbn10": "0765326353",
+      "description": "From #1 New York Times bestselling author Brandon Sanderson, The Way of Kings, Book One of the Stormlight Archive, begins an incredible new saga of epic proportion.Roshar is a world of stone and storms. Uncanny tempests of incredible power sweep across the rocky terrain so frequently that they have shaped ecology and civilization alike. Animals hide in shells, trees pull in branches, and grass retracts into the soilless ground. Cities are built only where the topography offers shelter.It has been centuries since the fall of the ten consecrated orders known as the Knights Radiant, but their Shardblades and Shardplate remain: mystical swords and suits of armor that transform ordinary men into near-invincible warriors. Men trade kingdoms for Shardblades. Wars were fought for them, and won by them.One such war rages on a ruined landscape called the Shattered Plains. There, Kaladin, who traded his medical apprenticeship for a spear to protect his little brother, has been reduced to slavery. In a war that makes no sense, where ten armies fight separately against a single foe, he struggles to save his men and to fathom the leaders who consider them expendable.Brightlord Dalinar Kholin commands one of those other armies. Like his brother, the late king, he is fascinated by an ancient text called The Way of Kings. Troubled by over-powering visions of ancient times and the Knights Radiant, he has begun to doubt his own sanity.Across the ocean, an untried young woman named Shallan seeks to train under an eminent scholar and notorious heretic, Dalinar's niece, Jasnah. Though she genuinely loves learning, Shallan's motives are less than pure. As she plans a daring theft, her research for Jasnah hints at secrets of the Knights Radiant and the true cause of the war.The result of over ten years of planning, writing, and world-building, The Way of Kings is but the opening movement of the Stormlight Archive, a bold masterpiece in the making.Speak again the ancient oaths:Life before death.Strength before weakness.Journey before Destination.and return to men the Shards they once bore.The Knights Radiant must stand again.Other Tor books by Brandon SandersonThe CosmereThe Stormlight Archive● The Way of Kings● Words of Radiance● Edgedancer (novella)● Oathbringer● Dawnshard (novella)● Rhythm of WarThe Mistborn SagaThe Original Trilogy● Mistborn● The Well of Ascension● The Hero of AgesWax and Wayne● The Alloy of Law● Shadows of Self● The Bands of Mourning● The Lost MetalOther Cosmere novels● Elantris● Warbreaker● Tress of the Emerald Sea● Yumi and the Nightmare Painter● The Sunlit ManCollection● Arcanum Unbounded: The Cosmere CollectionThe Alcatraz vs. the Evil Librarians series● Alcatraz vs. the Evil Librarians● The Scrivener's Bones● The Knights of Crystallia● The Shattered Lens● The Dark Talent● Bastille vs. the Evil Librarians (with Janci Patterson)Other novels● The Rithmatist● Legion: The Many Lives of Stephen Leeds● The Frugal Wizard’s Handbook for Surviving Medieval EnglandOther books by Brandon SandersonThe Reckoners● Steelheart● Firefight● CalamitySkyward● Skyward● Starsight● Cytonic● Skyward Flight (with Janci Patterson)● Defiant",
+      "link": "https://www.isbnlab.com/book/9780765326355/the-way-of-kings",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 1008,
+      "physicalFormat": "Hardcover",
+      "publishDate": "2010-08-31T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.639122672787554,
+          "count": 3921,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [],
+      "subjects": [
+        {
+          "id": 51,
+          "slug": "fiction",
+          "name": "Fiction"
+        },
+        {
+          "id": 311,
+          "slug": "adventure",
+          "name": "Adventure"
+        },
+        {
+          "id": 387,
+          "slug": "magic",
+          "name": "Magic"
+        },
+        {
+          "id": 787,
+          "slug": "fantasy",
+          "name": "Fantasy"
+        },
+        {
+          "id": 1054,
+          "slug": "military",
+          "name": "Military"
+        },
+        {
+          "id": 33142,
+          "slug": "epic",
+          "name": "Epic"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4387209,
+          "slug": "tor-publishing-group",
+          "name": "Tor Publishing Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Brandon Sanderson"
+        }
+      ],
+      "series": {
+        "name": "Stormlight Archive",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780765326355.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "science-fiction",
+    "book": {
+      "title": "The Three-Body Problem",
+      "subtitle": "Remembrance of Earth's Past Series, Book 1",
+      "isbn13": "9780765382030",
+      "isbn10": "0765382032",
+      "description": "The inspiration for the Netflix series 3 Body Problem!WINNER OF THE HUGO AWARD FOR BEST NOVELOver 1 million copies sold in North America“A mind-bending epic.”—The New York Times • “War of the Worlds for the 21st century.”—The Wall Street Journal • “Fascinating.”—TIME • “Extraordinary.”—The New Yorker • “Wildly imaginative.”—Barack Obama • “Provocative.”—Slate • “A breakthrough book.”—George R. R. Martin • “Impossible to put down.”—GQ • “Absolutely mind-unfolding.”—NPR • “You should be reading Liu Cixin.”—The Washington PostThe Three-Body Problem is the first novel in the groundbreaking, Hugo Award-winning series from China's most beloved science fiction author, Cixin Liu.Set against the backdrop of China's Cultural Revolution, a secret military project sends signals into space to establish contact with aliens. An alien civilization on the brink of destruction captures the signal and plans to invade Earth. Meanwhile, on Earth, different camps start forming, planning to either welcome the superior beings and help them take over a world seen as corrupt, or to fight against the invasion. The result is a science fiction masterpiece of enormous scope and vision.The Three-Body Problem SeriesThe Three-Body ProblemThe Dark ForestDeath's EndOther Books by Cixin LiuBall Lightning Supernova EraTo Hold Up the SkyThe Wandering EarthA View from the Stars",
+      "link": "https://www.isbnlab.com/book/9780765382030/the-three-body-problem",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 416,
+      "physicalFormat": "Trade Paperback",
+      "publishDate": "2016-01-12T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.002231556839066,
+          "count": 3809,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [],
+      "subjects": [
+        {
+          "id": 51,
+          "slug": "fiction",
+          "name": "Fiction"
+        },
+        {
+          "id": 514,
+          "slug": "china",
+          "name": "China"
+        },
+        {
+          "id": 1005,
+          "slug": "21st-century",
+          "name": "21st Century"
+        },
+        {
+          "id": 2604,
+          "slug": "science-fiction",
+          "name": "Science Fiction"
+        },
+        {
+          "id": 7862,
+          "slug": "environmental",
+          "name": "Environmental"
+        },
+        {
+          "id": 9083,
+          "slug": "fiction-science-fiction-general",
+          "name": "Fiction, Science Fiction, General"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4387209,
+          "slug": "tor-publishing-group",
+          "name": "Tor Publishing Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Cixin Liu"
+        }
+      ],
+      "series": {
+        "name": "Remembrance of Earth's Past",
+        "number": 1
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780765382030.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "mystery",
+    "book": {
+      "title": "The Silent Patient",
+      "subtitle": null,
+      "isbn13": "9781250301697",
+      "isbn10": "1250301696",
+      "description": "**THE INSTANT #1 NEW YORK TIMES BESTSELLER** A New York Times 50 Best Thrillers of the 21st Century\"An unforgettable—and Hollywood-bound—new thriller... A mix of Hitchcockian suspense, Agatha Christie plotting, and Greek tragedy.\"—Entertainment WeeklyThe Silent Patient is a shocking psychological thriller of a woman’s act of violence against her husband—and of the therapist obsessed with uncovering her motive.Alicia Berenson’s life is seemingly perfect. A famous painter married to an in-demand fashion photographer, she lives in a grand house with big windows overlooking a park in one of London’s most desirable areas. One evening her husband Gabriel returns home late from a fashion shoot, and Alicia shoots him five times in the face, and then never speaks another word.Alicia’s refusal to talk, or give any kind of explanation, turns a domestic tragedy into something far grander, a mystery that captures the public imagination and casts Alicia into notoriety. The price of her art skyrockets, and she, the silent patient, is hidden away from the tabloids and spotlight at the Grove, a secure forensic unit in North London.Theo Faber is a criminal psychotherapist who has waited a long time for the opportunity to work with Alicia. His determination to get her to talk and unravel the mystery of why she shot her husband takes him down a twisting path into his own motivations—a search for the truth that threatens to consume him....",
+      "link": "https://www.isbnlab.com/book/9781250301697/the-silent-patient",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 336,
+      "physicalFormat": "Hardcover",
+      "publishDate": "2019-02-05T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 3.816907051282051,
+          "count": 2496,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [],
+      "subjects": [
+        {
+          "id": 51,
+          "slug": "fiction",
+          "name": "Fiction"
+        },
+        {
+          "id": 312,
+          "slug": "thriller",
+          "name": "Thriller"
+        },
+        {
+          "id": 993,
+          "slug": "london",
+          "name": "London"
+        },
+        {
+          "id": 1005,
+          "slug": "21st-century",
+          "name": "21st Century"
+        },
+        {
+          "id": 9541,
+          "slug": "fiction-psychological",
+          "name": "Fiction_psychological"
+        },
+        {
+          "id": 9542,
+          "slug": "psychological",
+          "name": "Psychological"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 130,
+          "slug": "st-martin-s-press",
+          "name": "St. Martin's Press"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Alex Michaelides"
+        }
+      ],
+      "series": null,
+      "covers": [
+        "https://covers.isbnlab.com/9781250301697.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "nonfiction",
+    "book": {
+      "title": "Becoming",
+      "subtitle": null,
+      "isbn13": "9781524763145",
+      "isbn10": "1524763144",
+      "description": "<b>Now in paperback—the intimate, powerful, and inspiring memoir by the former First Lady of the United States, featuring a new introduction by Michelle Obama, a letter from the author to her younger self, and a book club guide with 20 discussion questions and a 5-question Q&A</b><br> <br><b>#1 <i>NEW YORK TIMES</i> BESTSELLER • WATCH THE EMMY-NOMINATED NETFLIX ORIGINAL DOCUMENTARY • OPRAH’S BOOK CLUB PICK • NAACP IMAGE AWARD WINNER</b> <b>• ONE OF <i>ESSENCE</i>’S 50 MOST IMPACTFUL BLACK BOOKS OF THE PAST 50 YEARS</b><br><br>In a life filled with meaning and accomplishment, Michelle Obama has emerged as one of the most iconic and compelling women of our era. As First Lady of the United States of America—the first African American to serve in that role—she helped create the most welcoming and inclusive White House in history, while also establishing herself as a powerful advocate for women and girls in the U.S. and around the world, dramatically changing the ways that families pursue healthier and more active lives, and standing with her husband as he led America through some of its most harrowing moments. Along the way, she showed us a few dance moves, crushed Carpool Karaoke, and raised two down-to-earth daughters under an unforgiving media glare.<br> <br>In her memoir, a work of deep reflection and mesmerizing storytelling, Michelle Obama invites readers into her world, chronicling the experiences that have shaped her—from her childhood on the South Side of Chicago to her years as an executive balancing the demands of motherhood and work, to her time spent at the world’s most famous address. With unerring honesty and lively wit, she describes her triumphs and her disappointments, both public and private, telling her full story as she has lived it—in her own words and on her own terms. Warm, wise, and revelatory, <i>Becoming</i> is the deeply personal reckoning of a woman of soul and substance who has steadily defied expectations—and whose story inspires us to do the same.",
+      "link": "https://www.isbnlab.com/book/9781524763145/becoming",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 464,
+      "physicalFormat": "Paperback / softback",
+      "publishDate": "2021-03-02T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.431547619047619,
+          "count": 840,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [
+        {
+          "id": 587,
+          "slug": "BIO026000",
+          "name": "BIOGRAPHY & AUTOBIOGRAPHY / Memoirs"
+        }
+      ],
+      "subjects": [
+        {
+          "id": 4889,
+          "slug": "biographies",
+          "name": "Biographies"
+        },
+        {
+          "id": 15720,
+          "slug": "memoirs",
+          "name": "Memoirs"
+        },
+        {
+          "id": 19128,
+          "slug": "best-books",
+          "name": "Best Books"
+        },
+        {
+          "id": 19321,
+          "slug": "obama",
+          "name": "Obama"
+        },
+        {
+          "id": 52726,
+          "slug": "barack-obama",
+          "name": "Barack Obama"
+        },
+        {
+          "id": 208564,
+          "slug": "inspirational-books",
+          "name": "Inspirational Books"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4811,
+          "slug": "random-house-incorporated",
+          "name": "Random House, Incorporated"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Michelle Obama"
+        }
+      ],
+      "series": null,
+      "covers": [
+        "https://covers.isbnlab.com/9781524763145.jpg"
+      ]
+    }
+  }
+]

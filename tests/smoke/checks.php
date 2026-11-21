@@ -53,6 +53,10 @@ add_filter(
 	2
 );
 ( new ISBNLab_Client( 'smoke-token', 0 ) )->test_connection();
+add_filter( 'isbnlab_pre_get_book', $supply = function ( $data, $isbn ) { return '9780306406157' === $isbn ? array( 'title' => 'Supplied', 'isbn13' => $isbn ) : $data; }, 10, 2 );
+$supplied = ( new ISBNLab_Client( '', 0 ) )->get_book( '9780306406157' );
+$check( 'isbnlab_pre_get_book supplies a book with no API call', ! is_wp_error( $supplied ) && 'Supplied' === $supplied->title() );
+remove_filter( 'isbnlab_pre_get_book', $supply, 10 );
 $check( 'requests ask a Playground CORS proxy to keep the token', 'Authorization' === ( $GLOBALS['isbnlab_sent_headers']['X-Cors-Proxy-Allowed-Request-Headers'] ?? '' ) );
 
 // Client and cache.

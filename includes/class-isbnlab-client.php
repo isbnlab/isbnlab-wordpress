@@ -78,6 +78,17 @@ final class ISBNLab_Client {
 			return new WP_Error( 'isbnlab_invalid_isbn', __( 'That is not a valid ISBN-10 or ISBN-13.', 'isbnlab' ) );
 		}
 
+		/**
+		 * Supplies a book without calling the API, such as from your own catalogue.
+		 *
+		 * @param array|null $data   Book data in the API's format, or null to look it up as usual.
+		 * @param string     $isbn13 The ISBN-13.
+		 */
+		$supplied = apply_filters( 'isbnlab_pre_get_book', null, $isbn13 );
+		if ( is_array( $supplied ) ) {
+			return new ISBNLab_Book( $supplied );
+		}
+
 		// Without a token, the bundled example book still works, so the plugin can be tried first.
 		if ( '' === $this->token ) {
 			if ( self::EXAMPLE_ISBN === $isbn13 ) {
