@@ -86,12 +86,94 @@ final class ISBNLab_Book {
 	}
 
 	/**
-	 * Description, as plain text with line breaks.
+	 * Description as the API sends it, which can contain HTML.
 	 *
 	 * @return string
 	 */
 	public function description() {
 		return $this->string( 'description' );
+	}
+
+	/**
+	 * The description's text blocks, split at paragraphs, list items and double line breaks.
+	 * Keeps inline tags.
+	 *
+	 * @return string[]
+	 */
+	private function description_blocks() {
+		$parts = preg_split( '#</?(?:p|div|ul|ol|li|h[1-6]|blockquote)\b[^>]*>|<br\s*/?>\s*<br\s*/?>|\n\s*\n#i', $this->description() );
+		$parts = array_map(
+			function ( $part ) {
+				return trim( (string) preg_replace( '#<br\s*/?>#i', ' ', $part ) );
+			},
+			(array) $parts
+		);
+
+		return array_values(
+			array_filter(
+				$parts,
+				function ( $part ) {
+					return '' !== trim( self::without_tags( $part ) );
+				}
+			)
+		);
+	}
+
+	/**
+	 * Removes HTML tags, and the contents of script and style elements.
+	 *
+	 * @param string $html         HTML.
+	 * @param bool   $keep_italics Keep i and em tags.
+	 * @return string
+	 */
+	private static function without_tags( $html, $keep_italics = false ) {
+		$html = (string) preg_replace( '#<(script|style)\b.*?</\1\s*>#is', '', $html );
+
+		return (string) preg_replace( $keep_italics ? '#<(?!/?(?:i|em)\b)[^>]*>#i' : '#<[^>]*>#', '', $html );
+	}
+
+	/**
+	 * The description as plain text, with a space where blocks met.
+	 *
+	 * @return string
+	 */
+	public function plain_description() {
+		$text = implode( ' ', array_map( array( __CLASS__, 'without_tags' ), $this->description_blocks() ) );
+
+		return trim( (string) preg_replace( '/\s+/u', ' ', html_entity_decode( $text, ENT_QUOTES | ENT_HTML5, 'UTF-8' ) ) );
+	}
+
+	/**
+	 * A short description: the opening blocks, about 25 to 70 words, as paragraphs. Keeps
+	 * italics (titles) and drops other tags, since openers are often entirely bold.
+	 *
+	 * @return string HTML, or ''.
+	 */
+	public function short_description() {
+		$picked = array();
+		$count  = 0;
+
+		foreach ( $this->description_blocks() as $block ) {
+			$block = trim( self::without_tags( $block, true ) );
+			$words = count( (array) preg_split( '/\s+/u', trim( self::without_tags( $block ) ) ) );
+
+			if ( $count + $words > 70 ) {
+				// Too little so far, such as a one-line tagline: fill up from this block.
+				if ( $count < 25 ) {
+					$plain    = (array) preg_split( '/\s+/u', trim( self::without_tags( $block ) ) );
+					$picked[] = implode( ' ', array_slice( $plain, 0, 55 - $count ) ) . '…';
+				}
+				break;
+			}
+
+			$picked[] = $block;
+			$count   += $words;
+			if ( $count >= 25 ) {
+				break;
+			}
+		}
+
+		return $picked ? '<p>' . implode( '</p><p>', $picked ) . '</p>' : '';
 	}
 
 	/**
@@ -313,7 +395,7 @@ final class ISBNLab_Book {
 			'inLanguage'          => $this->language_code(),
 			'datePublished'       => $this->publish_date(),
 			'image'               => $this->cover_url(),
-			'description'         => $this->description(),
+			'description'         => $this->plain_description(),
 			'url'                 => $this->link(),
 		);
 

@@ -110,5 +110,14 @@ $odd = new ISBNLab_Book( array( 'covers' => array( 'http://example.com/a.jpg', '
 check( 'skips http cover', 'https://covers.isbnlab.com/b.jpg', $odd->cover_url() );
 check( 'ignores foreign link', '', $odd->link() );
 
+// Descriptions with HTML.
+$html = new ISBNLab_Book( array( 'description' => '<b><b>#1 <i>New York Times</i> bestseller</b></b><br><br><p>Second one. <a href="https://x.example">Link</a></p><ul><li>Third</li></ul>' ) );
+check( 'short description: drops bold and links, keeps italics, splits blocks', '<p>#1 <i>New York Times</i> bestseller</p><p>Second one. Link</p><p>Third</p>', $html->short_description() );
+check( 'plain description: a space where blocks met', '#1 New York Times bestseller Second one. Link Third', $html->plain_description() );
+check( 'schema description is plain', '#1 New York Times bestseller Second one. Link Third', ( new ISBNLab_Book( array( 'title' => 'T', 'isbn13' => '9780000000002', 'description' => $html->description() ) ) )->schema()['description'] );
+$long = new ISBNLab_Book( array( 'description' => trim( str_repeat( 'word ', 200 ) ) ) );
+check( 'short description: one long block is cut', 55, str_word_count( strip_tags( $long->short_description() ) ) );
+check( 'short description: empty', '', ( new ISBNLab_Book( array() ) )->short_description() );
+
 echo "{$count} checks, {$failures} failed (PHP " . PHP_VERSION . ")\n";
 exit( $failures > 0 ? 1 : 0 );

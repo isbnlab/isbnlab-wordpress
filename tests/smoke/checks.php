@@ -107,6 +107,7 @@ $names   = array_map(
 $check( 'apply: no notes', array() === $notes );
 $check( 'apply: name', 'The Gathering Storm' === $product->get_name() );
 $check( 'apply: description', false !== strpos( $product->get_description(), 'Tarmon Gai' ) );
+$check( 'apply: short description filled', '' !== $product->get_short_description() && str_word_count( wp_strip_all_tags( $product->get_short_description() ) ) < 80 );
 $check( 'apply: auto-draft becomes draft', 'draft' === $product->get_status() );
 $check( 'apply: own attribute kept', in_array( 'Condition', $names, true ) );
 $check( 'apply: book attributes', in_array( 'Author', $names, true ) && in_array( 'Pages', $names, true ) );
@@ -118,6 +119,13 @@ $image_id = $product->get_image_id();
 
 ISBNLab_WooCommerce::apply( $product, $book, array( 'title', 'subtitle', 'cover', 'attributes', 'sku' ) );
 $product = wc_get_product( $product->get_id() );
+$own = wc_get_product( $product->get_id() );
+$own->set_short_description( 'Written by the store.' );
+$own->save();
+ISBNLab_WooCommerce::apply( $own, ISBNLab_Client::from_settings()->get_book( '9780765302304' ), array( 'description' ) );
+$check( 'apply: keeps a short description the store wrote', 'Written by the store.' === wc_get_product( $own->get_id() )->get_short_description() );
+$own->set_short_description( '' );
+$own->save();
 $check( 'reapply: subtitle in name', 'The Gathering Storm: Book Twelve of the Wheel of Time' === $product->get_name() );
 $check( 'reapply: cover reused, not downloaded again', $image_id === $product->get_image_id() );
 $check( 'reapply: no duplicate attributes', count( $names ) === count( $product->get_attributes() ) );

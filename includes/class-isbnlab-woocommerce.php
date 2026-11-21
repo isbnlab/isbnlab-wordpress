@@ -15,6 +15,7 @@ final class ISBNLab_WooCommerce {
 
 	const META_ISBN  = '_isbnlab_isbn13';
 	const META_COVER = '_isbnlab_cover_source';
+	const META_SHORT = '_isbnlab_short_description';
 
 	/**
 	 * Hook into WordPress.
@@ -227,6 +228,15 @@ final class ISBNLab_WooCommerce {
 
 		if ( isset( $want['description'] ) && '' !== $book->description() ) {
 			$product->set_description( wpautop( wp_kses_post( $book->description() ) ) );
+
+			// WooCommerce would otherwise show the description with its formatting stripped at the top
+			// of the page. A short description the store wrote itself is kept.
+			$current = $product->get_short_description();
+			if ( '' === trim( $current ) || $current === $product->get_meta( self::META_SHORT ) ) {
+				$short = force_balance_tags( wp_kses( $book->short_description(), array( 'p' => array(), 'i' => array(), 'em' => array() ) ) );
+				$product->set_short_description( $short );
+				$product->update_meta_data( self::META_SHORT, $short );
+			}
 		}
 
 		if ( isset( $want['attributes'] ) ) {
@@ -529,7 +539,7 @@ final class ISBNLab_WooCommerce {
 			</div>
 		</div>
 		<?php if ( '' !== $book->description() ) : ?>
-			<p class="isbnlab-description"><?php echo esc_html( wp_trim_words( $book->description(), 40 ) ); ?></p>
+			<p class="isbnlab-description"><?php echo esc_html( wp_trim_words( $book->plain_description(), 40 ) ); ?></p>
 		<?php endif; ?>
 		<?php
 	}
