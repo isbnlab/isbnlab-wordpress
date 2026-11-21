@@ -38,7 +38,7 @@ Type an ISBN and get the book's title, subtitle, authors, publisher, publication
 
 == External services ==
 
-This plugin gets book data from the ISBNLab API at https://www.isbnlab.com, run by RINC Productions, LLC. Without an API token it makes no requests: the example book (ISBN 978-0-7653-0230-4) and its cover are bundled in the plugin.
+This plugin gets book data from the ISBNLab API at https://www.isbnlab.com, run by RINC Productions, LLC. With no API token saved, the only request is for the public example book (ISBN 978-0-7653-0230-4) and its cover, made when someone looks up that ISBN or shows it in a block or shortcode. That request sends no token.
 
 * **What is sent, and when:** the ISBN being looked up and your API token, when someone clicks **Look up** or **Apply to product** on a product, when a page shows a book block or shortcode whose lookup is not already cached, and when you click **Test connection** in the settings. Requests come from your web server, not from visitors' browsers. No visitor data and no other information about your site is sent, apart from the plugin and WordPress version numbers in the user agent.
 * **Cover images:** book cards load cover images from covers.isbnlab.com in visitors' browsers. A product's cover is downloaded once into your media library.
@@ -57,7 +57,7 @@ ISBNLab [terms of service](https://www.isbnlab.com/terms-of-use) and [privacy po
 
 = Can I try it without an account? =
 
-Yes. Until you add a token, the example ISBN 978-0-7653-0230-4 works everywhere in the plugin, using data bundled with it. Other ISBNs ask for a token.
+Yes. Until you add a token, the example ISBN 978-0-7653-0230-4 works everywhere in the plugin, loaded from ISBNLab's public sample. Other ISBNs ask for a token.
 
 = Does it need WooCommerce? =
 

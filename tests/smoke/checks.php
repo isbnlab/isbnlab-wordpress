@@ -16,10 +16,20 @@ $check = function ( $label, $ok ) use ( &$failures ) {
 
 update_option( 'isbnlab_fake_calls', 0 );
 
-// No token: only the bundled example book, and no network calls at all.
+// No token: only the public example book, and never the API.
 update_option( 'isbnlab_fake_cover_calls', 0 );
+update_option( 'isbnlab_fake_example_calls', 0 );
+delete_option( 'isbnlab_fake_example_token_sent' );
+delete_transient( 'isbnlab_book_example' );
+update_option( 'isbnlab_fake_example_down', 1 );
+$down = ( new ISBNLab_Client( '' ) )->get_book( '978-0-7653-0230-4' );
+$check( 'no token: example unavailable gives a clear error', is_wp_error( $down ) && 'isbnlab_example_unavailable' === $down->get_error_code() );
+delete_option( 'isbnlab_fake_example_down' );
 $example = ( new ISBNLab_Client( '' ) )->get_book( '978-0-7653-0230-4' );
-$check( 'no token: example book works', $example instanceof ISBNLab_Book && 'The Gathering Storm' === $example->title() );
+$check( 'no token: example book works after a failure', $example instanceof ISBNLab_Book && 'The Gathering Storm' === $example->title() );
+( new ISBNLab_Client( '' ) )->get_book( '9780765302304' );
+$check( 'no token: example fetched once, then cached', 2 === (int) get_option( 'isbnlab_fake_example_calls' ) );
+$check( 'no token: example request sends no token', ! get_option( 'isbnlab_fake_example_token_sent' ) );
 $no_token = ( new ISBNLab_Client( '' ) )->get_book( '9780439708180' );
 $check( 'no token: other ISBNs ask for a token', is_wp_error( $no_token ) && 'isbnlab_no_token' === $no_token->get_error_code() );
 $check( 'no token: example shortcode renders', false !== strpos( do_shortcode( '[isbnlab_book isbn="9780765302304"]' ), 'The Gathering Storm' ) );
@@ -28,8 +38,8 @@ $demo->set_name( 'demo' );
 $demo->save();
 $notes = ISBNLab_WooCommerce::apply( $demo, $example, array( 'title', 'cover', 'attributes' ) );
 $demo  = wc_get_product( $demo->get_id() );
-$check( 'no token: example fills a product with the bundled cover', array() === $notes && $demo->get_image_id() > 0 && 'The Gathering Storm' === $demo->get_name() );
-$check( 'no token: no API or cover requests', 0 === (int) get_option( 'isbnlab_fake_calls' ) && 0 === (int) get_option( 'isbnlab_fake_cover_calls' ) );
+$check( 'no token: example fills a product with its cover', array() === $notes && $demo->get_image_id() > 0 && 'The Gathering Storm' === $demo->get_name() );
+$check( 'no token: API never called, cover downloaded once', 0 === (int) get_option( 'isbnlab_fake_calls' ) && 1 === (int) get_option( 'isbnlab_fake_cover_calls' ) );
 $demo->delete( true );
 wp_delete_attachment( $demo->get_image_id(), true );
 

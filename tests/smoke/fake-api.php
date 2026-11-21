@@ -29,6 +29,22 @@ add_filter(
 			);
 		}
 
+		if ( 0 === strpos( $url, 'https://www.isbnlab.com/book/example/' ) ) {
+			update_option( 'isbnlab_fake_example_calls', (int) get_option( 'isbnlab_fake_example_calls', 0 ) + 1 );
+			if ( isset( $args['headers']['Authorization'] ) ) {
+				update_option( 'isbnlab_fake_example_token_sent', 1 );
+			}
+			$down = (bool) get_option( 'isbnlab_fake_example_down' );
+
+			return array(
+				'headers'  => array( 'content-type' => 'application/json' ),
+				'body'     => $down ? '' : file_get_contents( '/fixtures/book.json' ),
+				'response' => $down ? array( 'code' => 503, 'message' => 'Unavailable' ) : array( 'code' => 200, 'message' => 'OK' ),
+				'cookies'  => array(),
+				'filename' => null,
+			);
+		}
+
 		if ( 0 !== strpos( $url, 'https://www.isbnlab.com/api/' ) ) {
 			return $preempt;
 		}

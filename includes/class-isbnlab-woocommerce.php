@@ -481,24 +481,8 @@ final class ISBNLab_WooCommerce {
 
 		/* translators: %s: book title. */
 		$alt = sprintf( __( 'Cover of %s', 'isbnlab' ), $book->title() );
-		$local = ISBNLab_Client::example_cover_path( $url );
-		if ( '' !== $local ) {
-			$tmp = wp_tempnam( basename( $local ) );
-			copy( $local, $tmp );
-			$id = media_handle_sideload(
-				array(
-					'name'     => basename( $local ),
-					'tmp_name' => $tmp,
-				),
-				$post_id,
-				$alt
-			);
-			if ( is_wp_error( $id ) ) {
-				wp_delete_file( $tmp );
-			}
-		} else {
-			$id = media_sideload_image( $url, $post_id, $alt, 'id' );
-		}
+		$id  = media_sideload_image( $url, $post_id, $alt, 'id' );
+
 
 		if ( is_wp_error( $id ) ) {
 			return new WP_Error(

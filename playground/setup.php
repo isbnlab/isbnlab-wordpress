@@ -50,12 +50,8 @@ $shelves = array(
 // Left out of the shop, so a visitor can create them from the ISBN.
 $not_in_shop = array( '9780618260300', '9780553418026', '9780735211292' );
 
-$rows   = json_decode( (string) file_get_contents( __DIR__ . '/books/books.json' ), true );
-$rows[] = array(
-	'shelf' => 'fantasy',
-	'book'  => json_decode( (string) file_get_contents( ISBNLAB_DIR . 'assets/example/9780765302304.json' ), true ),
-	'file'  => ISBNLAB_DIR . 'assets/example/9780765302304.jpg',
-);
+$rows = json_decode( (string) file_get_contents( __DIR__ . '/books/books.json' ), true );
+
 
 $terms = array();
 foreach ( $shelves as $slug => $name ) {
@@ -83,7 +79,7 @@ $by_shelf = array_fill_keys( array_keys( $shelves ), array() );
 foreach ( $rows as $row ) {
 	$book  = new ISBNLab_Book( $row['book'] );
 	$isbn  = $book->isbn13();
-	$file  = isset( $row['file'] ) ? $row['file'] : __DIR__ . '/books/' . $isbn . '.jpg';
+	$file  = __DIR__ . '/books/' . $isbn . '.jpg';
 
 	$tmp = wp_tempnam( $isbn . '.jpg' );
 	copy( $file, $tmp );

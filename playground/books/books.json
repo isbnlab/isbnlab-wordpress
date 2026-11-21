@@ -1777,6 +1777,92 @@
   {
     "shelf": "fantasy",
     "book": {
+      "title": "The Gathering Storm",
+      "subtitle": "Book Twelve of the Wheel of Time",
+      "isbn13": "9780765302304",
+      "isbn10": "0765302306",
+      "description": "With Robert Jordan’s untimely passing in 2007, Brandon Sanderson, the New York Times bestselling author of the Mistborn novels and the Stormlight Archive, was chosen by Jordan’s editor—his wife, Harriet McDougal—to complete the final volume in The Wheel of Time®, later expanded to three books.The Gathering Storm, the twelfth novel in Jordan’s #1 New York Times bestselling epic fantasy series, begins the story’s dramatic conclusion as Rand al'Thor, the Dragon Reborn, struggles to unite a fractured network of kingdoms and alliances in preparation for the Last Battle.War is coming. The Dark One’s forces are brutal and unrelenting. Rand must forge a united front, but the Seanchan remain an immediate threat, as do the Forsaken. With so many shadows swirling around him, Rand is consumed by his responsibilities, turning heartless in the eyes of his allies, and even more merciless to his enemies.Meanwhile the Seanchan march on the White Tower, where Egwene al'Vere works to rally the disparate factions of the Aes Sedai together, even as their tyrannical leader schemes against her. Providing leadership in the face of increasing uncertainty and despair, Egwene’s fight will prove the mettle of the Aes Sedai, and her conflict will decide the future of the White Tower—and possibly the world itself.Since its debut in 1990, The Wheel of Time® by Robert Jordan has captivated millions of readers around the globe with its scope, originality, and compelling characters. The last six books in series were all instant #1 New York Times bestsellers, and The Eye of the World was named one of America's best-loved novels by PBS's The Great American Read.The Wheel of Time®New Spring: The Novel#1 The Eye of the World#2 The Great Hunt#3 The Dragon Reborn#4 The Shadow Rising#5 The Fires of Heaven#6 Lord of Chaos#7 A Crown of Swords#8 The Path of Daggers#9 Winter's Heart#10 Crossroads of Twilight#11 Knife of DreamsBy Robert Jordan and Brandon Sanderson#12 The Gathering Storm#13 Towers of Midnight#14 A Memory of LightBy Robert Jordan and Teresa PattersonThe World of Robert Jordan's The Wheel of TimeBy Robert Jordan, Harriet McDougal, Alan Romanczuk, and Maria SimonsThe Wheel of Time CompanionBy Robert Jordan and Amy RomanczukPatterns of the Wheel: Coloring Art Based on Robert Jordan's The Wheel of Time",
+      "link": "https://www.isbnlab.com/book/9780765302304/the-gathering-storm",
+      "language": "English",
+      "languageCode": "en",
+      "numberOfPages": 784,
+      "physicalFormat": "Hardcover",
+      "publishDate": "2009-10-27T00:00:00+00:00",
+      "publishDatePrecision": "day",
+      "ratings": {
+        "summary": {
+          "average": 4.448430493273543,
+          "count": 892,
+          "sum": 0
+        },
+        "counts": {
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "genres": [],
+      "subjects": [
+        {
+          "id": 51,
+          "slug": "fiction",
+          "name": "Fiction"
+        },
+        {
+          "id": 787,
+          "slug": "fantasy",
+          "name": "Fantasy"
+        },
+        {
+          "id": 7012,
+          "slug": "famous",
+          "name": "Famous"
+        },
+        {
+          "id": 33142,
+          "slug": "epic",
+          "name": "Epic"
+        },
+        {
+          "id": 60844,
+          "slug": "action-and-adventure",
+          "name": "Action And Adventure"
+        },
+        {
+          "id": 111968,
+          "slug": "rand-al-thor-fictitious-character",
+          "name": "Rand Al'Thor (Fictitious Character)"
+        }
+      ],
+      "publishers": [
+        {
+          "id": 4387209,
+          "slug": "tor-publishing-group",
+          "name": "Tor Publishing Group"
+        }
+      ],
+      "authors": [
+        {
+          "name": "Robert Jordan"
+        },
+        {
+          "name": "Brandon Sanderson"
+        }
+      ],
+      "series": {
+        "name": "Wheel of time",
+        "number": 12
+      },
+      "covers": [
+        "https://covers.isbnlab.com/9780765302304.jpg"
+      ]
+    }
+  },
+  {
+    "shelf": "fantasy",
+    "book": {
       "title": "The Way of Kings",
       "subtitle": "Book One of the Stormlight Archive",
       "isbn13": "9780765326355",

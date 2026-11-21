@@ -16,9 +16,14 @@ final class ISBNLab_Client {
 	const BASE_URL = 'https://www.isbnlab.com';
 
 	/**
-	 * The book in assets/example, which works without a token.
+	 * The book that works without a token, from the public EXAMPLE_URL.
 	 */
 	const EXAMPLE_ISBN = '9780765302304';
+
+	/**
+	 * Public sample of the API's book format. Needs no token.
+	 */
+	const EXAMPLE_URL = 'https://www.isbnlab.com/book/example/9780765302304/the-gathering-storm-by-robert-jordan.json';
 
 	/**
 	 * How long a "not found" answer is remembered, so a missing ISBN on a busy page is not
@@ -89,13 +94,10 @@ final class ISBNLab_Client {
 			return new ISBNLab_Book( $supplied );
 		}
 
-		// Without a token, the bundled example book still works, so the plugin can be tried first.
+		// Without a token, the public example book still works, so the plugin can be tried first.
 		if ( '' === $this->token ) {
 			if ( self::EXAMPLE_ISBN === $isbn13 ) {
-				$example = self::example_book();
-				if ( $example ) {
-					return $example;
-				}
+				return self::example_book();
 			}
 
 			return new WP_Error(
@@ -135,28 +137,40 @@ final class ISBNLab_Client {
 	}
 
 	/**
-	 * The example book bundled in assets/example, a copy of
-	 * https://www.isbnlab.com/book/example/9780765302304/the-gathering-storm-by-robert-jordan.json.
+	 * The public example book, fetched with no token and cached for a day.
 	 *
-	 * @return ISBNLab_Book|null
+	 * @return ISBNLab_Book|WP_Error
 	 */
 	public static function example_book() {
-		$file = ISBNLAB_DIR . 'assets/example/' . self::EXAMPLE_ISBN . '.json';
-		$data = is_readable( $file ) ? json_decode( (string) file_get_contents( $file ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- a local file.
+		$cached = get_transient( 'isbnlab_book_example' );
+		if ( is_array( $cached ) ) {
+			return new ISBNLab_Book( $cached );
+		}
 
-		return is_array( $data ) ? new ISBNLab_Book( $data ) : null;
-	}
+		$response = wp_remote_get(
+			self::EXAMPLE_URL,
+			array(
+				'timeout'     => 10,
+				'redirection' => 2,
+				'headers'     => array( 'Accept' => 'application/json' ),
+				'user-agent'  => 'isbnlab-wordpress/' . ISBNLAB_VERSION . '; WordPress/' . get_bloginfo( 'version' ),
+			)
+		);
 
-	/**
-	 * The bundled cover file when $url is the example book's cover, so it is copied rather than downloaded.
-	 *
-	 * @param string $url Cover URL.
-	 * @return string Path, or '' for any other cover.
-	 */
-	public static function example_cover_path( $url ) {
-		$file = ISBNLAB_DIR . 'assets/example/' . self::EXAMPLE_ISBN . '.jpg';
+		$data = is_wp_error( $response ) || 200 !== (int) wp_remote_retrieve_response_code( $response )
+			? null
+			: json_decode( wp_remote_retrieve_body( $response ), true );
 
-		return ( 'https://covers.isbnlab.com/' . self::EXAMPLE_ISBN . '.jpg' === $url && is_readable( $file ) ) ? $file : '';
+		if ( ! is_array( $data ) || ! isset( $data['isbn13'] ) || self::EXAMPLE_ISBN !== $data['isbn13'] ) {
+			return new WP_Error(
+				'isbnlab_example_unavailable',
+				__( 'The example book could not be loaded from ISBNLab. Try again, or add your free API token under Settings > ISBNLab.', 'isbnlab' )
+			);
+		}
+
+		set_transient( 'isbnlab_book_example', $data, DAY_IN_SECONDS );
+
+		return new ISBNLab_Book( $data );
 	}
 
 	/**
