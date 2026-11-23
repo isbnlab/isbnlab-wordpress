@@ -35,14 +35,22 @@
 		{
 			"step": "installPlugin",
 			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "isbnlab"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "writeFiles",
+			"writeToPath": "/wordpress/wp-content/plugins/isbnlab/playground",
+			"filesTree": {
 				"resource": "git:directory",
 				"url": "https://github.com/isbnlab/isbnlab-wordpress",
 				"ref": "main",
-				"refType": "branch"
-			},
-			"options": {
-				"activate": true,
-				"targetFolderName": "isbnlab"
+				"refType": "branch",
+				"path": "playground"
 			}
 		},
 		{

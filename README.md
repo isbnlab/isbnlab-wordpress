@@ -50,7 +50,7 @@ The plugin calls only `GET /api/book/isbn/{isbn}` (lookups) and `GET /api/isbn/i
 
 ## The Playground demo
 
-`playground/blueprint.json` installs WooCommerce and this repository's `main` branch, then runs `playground/setup.php`, which builds a small store from the sample books in `playground/books` (refresh them with `ISBNLAB_API_TOKEN=... playground/fetch-books`) and makes the demo page. Both are left out of the plugin zip. WordPress.org's Live Preview button can use the same blueprint once it is copied to the listing's `assets/blueprints/blueprint.json`.
+`playground/blueprint.json` installs WooCommerce and the released plugin from WordPress.org, adds this repository's `playground` folder from `main`, then runs `playground/setup.php`, which builds a small store from the sample books in `playground/books` (refresh them with `ISBNLAB_API_TOKEN=... playground/fetch-books`) and makes the demo page. The folder is left out of the plugin zip. WordPress.org's Live Preview button uses a copy of this blueprint at `assets/blueprints/blueprint.json` in the plugin's SVN, so update that copy when this file changes.
 
 In Playground the plugin's API calls are made by the visitor's browser. Since www.isbnlab.com does not allow CORS from Playground, they go through Playground's CORS proxy (wordpress-playground-cors-proxy.net, run by the Playground project), which forwards the token only because the plugin sends `X-Cors-Proxy-Allowed-Request-Headers: Authorization`. So a token pasted in the demo passes through that proxy; use a test token there. The example book needs no request.
 
