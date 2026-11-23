@@ -5,7 +5,9 @@ A WordPress plugin for the [ISBNLab book metadata API](https://www.isbnlab.com/a
 - **WooCommerce:** fill a product from an ISBN. The ISBNLab box on the product screen looks up the book, shows a preview, and fills in the name, description, cover image, attributes (author, publisher, format, pages, …), the GTIN/ISBN field and, if you want, the SKU.
 - **Any site:** show a book with the **ISBNLab Book** block or `[isbnlab_book isbn="9780765302304"]`. Each card includes schema.org `Book` structured data.
 
-**[Try it in your browser](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/isbnlab/isbnlab-wordpress/main/playground/blueprint.json)**: a live WordPress with WooCommerce and the plugin, running in WordPress Playground. No account needed: without a token the plugin works with one example book, ISBN 978-0-7653-0230-4 (bundled in `assets/example`, a copy of [this sample](https://www.isbnlab.com/book/example/9780765302304/the-gathering-storm-by-robert-jordan.json)). Paste a free token on Settings > ISBNLab to look up any ISBN.
+**[Get it on WordPress.org](https://wordpress.org/plugins/isbnlab/)**
+
+**[Try it in your browser](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/isbnlab/isbnlab-wordpress/main/playground/blueprint.json)**: a live WordPress with WooCommerce and the plugin, running in WordPress Playground. No account needed: without a token the plugin works with one example book, ISBN 978-0-7653-0230-4, loaded from [this public sample](https://www.isbnlab.com/book/example/9780765302304/the-gathering-storm-by-robert-jordan.json). Paste a free token on Settings > ISBNLab to look up any ISBN.
 
 `readme.txt` is the WordPress.org listing and the user documentation.
 
@@ -13,7 +15,13 @@ A WordPress plugin for the [ISBNLab book metadata API](https://www.isbnlab.com/a
 
 WordPress 6.3+, PHP 7.4+. WooCommerce 8.0+ for the product box (the GTIN field needs 9.2+). An ISBNLab account: [register](https://www.isbnlab.com/register); the Free plan has 1,000 calls a day.
 
+## Install
+
+In WordPress, go to Plugins > Add New, search for **ISBNLab Book Data**, then install and activate it. You can also download it from [its WordPress.org page](https://wordpress.org/plugins/isbnlab/). Then go to Settings > ISBNLab.
+
 ## Install from source
+
+For development:
 
 ```bash
 bin/package                 # dist/isbnlab-<version>.zip, from the last commit
