@@ -2,7 +2,7 @@
 Contributors: isbnlab
 Tags: isbn, books, woocommerce, book metadata, bookstore
 Requires at least: 6.3
-Tested up to: 7.1
+Tested up to: 7.2
 Requires PHP: 7.4
 Stable tag: 0.1.0
 License: GPLv2 or later

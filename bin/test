@@ -5,7 +5,7 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-for version in 7.4 8.4; do
+for version in 7.4 8.6; do
 	echo "== PHP $version"
 	docker run --rm -v "$PWD":/plugin:ro -w /plugin "php:$version-cli" bash -c '
 		set -e

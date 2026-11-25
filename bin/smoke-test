@@ -36,7 +36,7 @@ if [ -z "${LIVE:-}" ]; then
 fi
 docker run -d --name "$NAME-wp" --network "$NAME" -p "$PORT:80" "${MOUNTS[@]}" \
 	-e WORDPRESS_DB_HOST="$NAME-db" -e WORDPRESS_DB_USER=wp -e WORDPRESS_DB_PASSWORD=wp -e WORDPRESS_DB_NAME=wp \
-	wordpress:php8.3-apache > /dev/null
+	"${WP_IMAGE:-wordpress:php8.3-apache}" > /dev/null
 
 wp() {
 	docker run --rm --network "$NAME" --user 33:33 "${MOUNTS[@]}" \
